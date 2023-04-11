@@ -10,9 +10,13 @@ export class MessagesController {
   getMessages(): any {
     return this.messagesService.findAll()
   }
+
   @Get(':id')
-  getMessage(@Param('id') id: number) {
-    return this.messagesService.findOne(id)
+  getMessageById(@Param('id') id: number) {
+    console.log("id: " + id);
+    console.log("id type: " + typeof(id));
+    
+    return this.messagesService.findOne(+id)
   }
 
   @Post('')
@@ -31,8 +35,8 @@ export class MessagesController {
     }
   } */
   @Put(':id')
-  updateMessage(@Param('id') id: number, @Body() payload: Message) {
-    return this.messagesService.update(id, payload)
+  updateMessage(@Param('id') id: number, @Body() payload: any) {
+    return this.messagesService.update(+id, payload)
   }
   @Patch(':id')
   deleteMessage(@Param('id') id: number) {

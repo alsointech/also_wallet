@@ -22,10 +22,11 @@ export class MessagesService {
     }
 
     findOne(id: number) {
-        const message = this.messages.find(item => item.id === id)
-        // return !message?  throw "message not found" : message
-        if (!message) throw new HttpException('ERROR | message not found', HttpStatus.BAD_REQUEST);
-        return message
+        const message = this.messages.find((item) => item.id === id);
+        if (!message) {
+            throw new NotFoundException(`message #${id} not found`);
+        }
+        return message;
     }
 
     create(payload: Message) {
@@ -56,18 +57,19 @@ export class MessagesService {
         }
         return null */
         // si no lo encuentra levantar error
-
+        
         this.messages = this.messages.map(item => {
             if (item.id === id) {
                 item = {
-                    id,
+                    ...item,
                     ...payload
                 };
                 return item
-            }
+            } 
             return null
         })
         return this.messages
+        
     }
 
     delete(id: number) {
