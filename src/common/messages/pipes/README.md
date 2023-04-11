@@ -1,0 +1,1 @@
+create pipes for each url query
