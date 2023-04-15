@@ -87,7 +87,7 @@
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/2"
+						"url": "{{base_url}}/wires/messages/1"
 					},
 					"response": []
 				},
