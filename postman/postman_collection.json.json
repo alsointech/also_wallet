@@ -172,7 +172,7 @@
 					"response": []
 				},
 				{
-					"name": "update_message",
+					"name": "todo-update_message",
 					"id": "10793d68-2709-4bf0-a989-e571964435cc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
