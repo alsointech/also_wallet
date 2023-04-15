@@ -28,6 +28,6 @@ export class MessagesController {
 
   @Patch(':id')
   deleteMessage(@Param('id', ParseIntPipe) id: number) {
-    return this.messagesService.delete(+id)
+    return this.messagesService.delete(id)
   }
 }

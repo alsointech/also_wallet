@@ -1,22 +1,12 @@
-import { IsBoolean, IsNumber, IsString } from 'class-validator'
+import { PartialType } from '@nestjs/mapped-types'
+import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator'
 export class CreateMessageDto {
-
-    @IsNumber()
-    readonly id: number
     @IsString()
+    @IsNotEmpty()
     readonly title: string
     @IsString()
+    @IsNotEmpty()
     readonly text: string
-    @IsBoolean()
-    readonly visible: boolean
 }
 
-export class UpdateMessageDto {
-    @IsNumber()
-    readonly id?: number
-    @IsString()
-    readonly title?: string
-    readonly text?: string
-    @IsBoolean()
-    readonly visible?: boolean
-}
+export class UpdateMessageDto extends PartialType(CreateMessageDto) {}

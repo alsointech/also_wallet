@@ -50,7 +50,7 @@ export class MessagesService {
                 };
                 return item
             } 
-            return null
+            return null 
         })
         return this.messages
     }
