@@ -143,11 +143,11 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PATCH",
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"comment\": \"hello comment\"\r\n}",
+							"raw": "{\r\n    \"comment\": \"hello comment world\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
