@@ -147,14 +147,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\",\r\n    \"otro\": \"otro\"\r\n}",
+							"raw": "{\r\n    \"comment\": \"hello comment\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/"
+						"url": "{{base_url}}/wires/messages/comment/1"
 					},
 					"response": []
 				},
