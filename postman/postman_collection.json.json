@@ -124,7 +124,7 @@
 					"response": []
 				},
 				{
-					"name": "get_message",
+					"name": "todo-get_message",
 					"id": "1cded7f1-5a09-47d2-81ff-7c8441c003c3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
