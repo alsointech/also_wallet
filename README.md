@@ -13,6 +13,9 @@ git clone https://github.com/afrancocedeno/social-app-backend
 npm i
 ```
 ```
+git checkout dev
+```
+```
 npm run start:dev
 ```
 
