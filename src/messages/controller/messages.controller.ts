@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Put} from '@nestjs/common';
-import { MessagesService } from './messages.service';
-import { Message } from './messages.entity';
+import { MessagesService } from '../service/messages.service';
+import { CreateMessageDto, UpdateMessageDto } from '../dto/messages.dto';
 
 
 @Controller('/wires/messages')
@@ -17,27 +17,17 @@ export class MessagesController {
   }
 
   @Post('')
-  createMessage(@Body() payload: any) {
+  createMessage(@Body() payload: CreateMessageDto) {
     return this.messagesService.create(payload)
   }
 
-
-  /* @Put(':id')
-  @HttpCode(HttpStatus.ACCEPTED)
-  updateMessage(@Param('id') id: string, @Body() requestBody: any) {
-    return {
-      name: 'update message',
-      // requestBody.enable : false
-      requestBody
-    }
-  } */
   @Put(':id')
-  updateMessage(@Param('id') id: number, @Body() payload: any) {
+  updateMessage(@Param('id', ParseIntPipe) id: number, @Body() payload: UpdateMessageDto) {
     return this.messagesService.update(id, payload)
   }
 
   @Patch(':id')
-  deleteMessage(@Param('id') id: number) {
+  deleteMessage(@Param('id', ParseIntPipe) id: number) {
     return this.messagesService.delete(+id)
   }
 }

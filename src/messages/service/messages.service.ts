@@ -1,5 +1,6 @@
 import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
-import { Message } from './messages.entity';
+import { Message } from '../entity/messages.entity';
+import { CreateMessageDto, UpdateMessageDto } from '../dto/messages.dto';
 
 @Injectable()
 export class MessagesService {
@@ -29,7 +30,7 @@ export class MessagesService {
         return message;
     }
 
-    create(payload: Message) {
+    create(payload: CreateMessageDto) {
         ++this.id
         const newMessage: Message = {
             id: this.id,
@@ -40,24 +41,7 @@ export class MessagesService {
         return newMessage
     }
 
-    update(id: number, payload: any) {
-        // encontrar el id
-        /* let messageFound = this.findOne(id)
-        // si lo encuentra actualizarlo
-        // id no es el mismo index, encontrarlo
-        if (messageFound) {
-            const index = this.messages.findIndex(item => item.id === id)
-            // update the message
-            // this.messages[index].visible = false;
-            this.messages[index] = {
-                ...messageFound,
-                ...payload
-            };
-            return this.messages[index]
-        }
-        return null */
-        // si no lo encuentra levantar error
-        
+    update(id: number, payload: UpdateMessageDto) {        
         this.messages = this.messages.map(item => {
             if (item.id === id) {
                 item = {
@@ -69,7 +53,6 @@ export class MessagesService {
             return null
         })
         return this.messages
-        
     }
 
     delete(id: number) {
