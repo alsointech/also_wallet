@@ -194,7 +194,7 @@
 					"response": []
 				},
 				{
-					"name": "get_my_messages",
+					"name": "todo-get_my_messages",
 					"id": "4fab99d7-8787-41c3-ad69-526a9355035f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
