@@ -108,6 +108,108 @@
 			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
 		},
 		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "get_messages",
+					"id": "69d8d4c4-7e97-4870-bfc7-308d53284712",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "get_message",
+					"id": "1cded7f1-5a09-47d2-81ff-7c8441c003c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create_message",
+					"id": "ac04e891-8760-48f1-a774-55b77a8c8586",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\",\r\n    \"otro\": \"otro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_message",
+					"id": "95a7605e-758a-4aba-a025-37a5ad5ad30d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update_message",
+					"id": "10793d68-2709-4bf0-a989-e571964435cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/2"
+					},
+					"response": []
+				},
+				{
+					"name": "get_my_messages",
+					"id": "4fab99d7-8787-41c3-ad69-526a9355035f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/me"
+					},
+					"response": []
+				}
+			],
+			"id": "86525015-0e37-4b19-8117-7017494395cf"
+		},
+		{
 			"name": "auth",
 			"item": [
 				{
