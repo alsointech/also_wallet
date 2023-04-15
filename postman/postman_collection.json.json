@@ -9,7 +9,7 @@
 			"name": "messages",
 			"item": [
 				{
-					"name": "get_mexages",
+					"name": "get_messages",
 					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
