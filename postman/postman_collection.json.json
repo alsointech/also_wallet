@@ -137,7 +137,7 @@
 					"response": []
 				},
 				{
-					"name": "create_message",
+					"name": "create_comment",
 					"id": "ac04e891-8760-48f1-a774-55b77a8c8586",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
