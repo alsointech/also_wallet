@@ -9,8 +9,8 @@
 			"name": "messages",
 			"item": [
 				{
-					"name": "get_messages",
-					"_postman_id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
+					"name": "get_mexages",
+					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -23,7 +23,7 @@
 				},
 				{
 					"name": "get_message",
-					"_postman_id": "9b2d06b9-9ea6-4067-bc0f-29b6e39f49c3",
+					"id": "9b2d06b9-9ea6-4067-bc0f-29b6e39f49c3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -36,7 +36,7 @@
 				},
 				{
 					"name": "create_message",
-					"_postman_id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
+					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -58,7 +58,7 @@
 				},
 				{
 					"name": "delete_message",
-					"_postman_id": "84140e48-da95-46ac-882c-06faf2314934",
+					"id": "84140e48-da95-46ac-882c-06faf2314934",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -71,7 +71,7 @@
 				},
 				{
 					"name": "update_message",
-					"_postman_id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
+					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -93,7 +93,7 @@
 				},
 				{
 					"name": "get_my_messages",
-					"_postman_id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
+					"id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -105,14 +105,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
+			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
 		},
 		{
 			"name": "auth",
 			"item": [
 				{
 					"name": "get_messages",
-					"_postman_id": "7146584e-a6d9-4ff5-98f5-1721983d6e05",
+					"id": "7146584e-a6d9-4ff5-98f5-1721983d6e05",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -125,7 +125,7 @@
 				},
 				{
 					"name": "get_message",
-					"_postman_id": "689f0c75-85a8-4afb-8ca4-a61908013a4a",
+					"id": "689f0c75-85a8-4afb-8ca4-a61908013a4a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -154,7 +154,7 @@
 				},
 				{
 					"name": "create_user",
-					"_postman_id": "39cd3521-4a03-4d59-93b6-b2df08e98180",
+					"id": "39cd3521-4a03-4d59-93b6-b2df08e98180",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -176,7 +176,7 @@
 				},
 				{
 					"name": "get_my_messages",
-					"_postman_id": "a555f94f-f224-4179-bef4-8482d92b6f56",
+					"id": "a555f94f-f224-4179-bef4-8482d92b6f56",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -188,7 +188,7 @@
 					"response": []
 				}
 			],
-			"_postman_id": "8a404e73-3d3d-48fa-b2e8-0e89c4121b01"
+			"id": "8a404e73-3d3d-48fa-b2e8-0e89c4121b01"
 		}
 	]
 }
