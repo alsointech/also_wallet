@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, HttpStatus, Param, Patch, Post, Put, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Put} from '@nestjs/common';
 import { MessagesService } from './messages.service';
 import { Message } from './messages.entity';
 
@@ -12,11 +12,8 @@ export class MessagesController {
   }
 
   @Get(':id')
-  getMessageById(@Param('id') id: number) {
-    console.log("id: " + id);
-    console.log("id type: " + typeof(id));
-    
-    return this.messagesService.findOne(+id)
+  getMessageById(@Param('id', ParseIntPipe) id: number) {   
+    return this.messagesService.findOne(id)
   }
 
   @Post('')
@@ -36,10 +33,11 @@ export class MessagesController {
   } */
   @Put(':id')
   updateMessage(@Param('id') id: number, @Body() payload: any) {
-    return this.messagesService.update(+id, payload)
+    return this.messagesService.update(id, payload)
   }
+
   @Patch(':id')
   deleteMessage(@Param('id') id: number) {
-    return this.messagesService.delete(id)
+    return this.messagesService.delete(+id)
   }
 }
