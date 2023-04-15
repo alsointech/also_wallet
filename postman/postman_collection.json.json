@@ -159,7 +159,7 @@
 					"response": []
 				},
 				{
-					"name": "delete_message",
+					"name": "todo-delete_message",
 					"id": "95a7605e-758a-4aba-a025-37a5ad5ad30d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
