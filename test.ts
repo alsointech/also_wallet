@@ -20,7 +20,7 @@
 
 */
 
-class Person {
+/* class Person {
     constructor(private name: string, private age: number) { }
     getSummary() {
         return `my name is ${this.name}, and my age is ${this.age}`
@@ -30,4 +30,15 @@ class Person {
 const alejo = new Person('alejo', 28)
 console.log(alejo.getSummary());
 console.log(alejo);
-    
+     */
+
+
+const payload = {
+    coments: [
+        {
+            comment: "first comment"
+        }
+    ]
+}
+const objKeys = Object.keys(payload).includes('comments');
+console.log(objKeys);

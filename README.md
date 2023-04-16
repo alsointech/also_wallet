@@ -75,3 +75,6 @@ Nest is [MIT licensed](LICENSE).
 ## things to master
 
 - how to response the same orders in keys for each object
+- create gett comments by message
+- create get messages by user
+- create get messages by myuser

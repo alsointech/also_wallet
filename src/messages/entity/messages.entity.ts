@@ -6,7 +6,7 @@ export class Message {
     // user: string
     title: string
     text: string
-    // comments: string[]
+    comments: any
     // reactions: string[]
     // createdAt: string
     visible: boolean
