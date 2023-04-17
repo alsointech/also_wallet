@@ -1,12 +1,14 @@
 import { Body, Controller, Get, Param, ParseIntPipe, Patch, Post, Put} from '@nestjs/common';
 import { MessagesService } from '../service/messages.service';
 import { CreateMessageDto, UpdateMessageDto } from '../dto/messages.dto';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
-
+@ApiTags('messages')
 @Controller('/wires/messages')
 export class MessagesController {
   constructor(private messagesService: MessagesService) { }
   @Get('')
+  @ApiOperation({ summary: 'list all messages'})
   getMessages(): any {
     return this.messagesService.findAll()
   }

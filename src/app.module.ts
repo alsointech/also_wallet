@@ -1,6 +1,7 @@
 // dependencies 
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+import * as Joi from 'joi';
 
 // modules
 import { CommonModule } from './common/common.module';
@@ -15,7 +16,12 @@ import config from './config';
     ConfigModule.forRoot({
       envFilePath: environments[process.env.NODE_ENV] || '.env',
       load: [config],
-      isGlobal: true
+      isGlobal: true,
+      // validations on env variables types and exists
+      validationSchema: Joi.object({
+        DATABASE_NAME: Joi.string().required(),
+        DATABASE_PORT: Joi.number().required()
+      })
     }),
     MessagesModule,
     AuthModule,

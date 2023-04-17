@@ -1,4 +1,5 @@
-import { PartialType } from '@nestjs/mapped-types'
+import { PartialType } from '@nestjs/swagger'
+// import { PartialType } from '@nestjs/mapped-types'
 import { IsNotEmpty, IsString, isArray } from 'class-validator'
 export class CreateMessageDto {
     @IsString()
