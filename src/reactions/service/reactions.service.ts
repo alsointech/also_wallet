@@ -3,7 +3,7 @@ import { Message } from 'src/messages/entity/messages.entity';
 import { MessagesService } from 'src/messages/service/messages.service';
 
 @Injectable()
-export class CommentsService {
+export class ReactionsService {
     private messages: Message[]
     constructor(
         private messagesService: MessagesService
@@ -19,12 +19,12 @@ export class CommentsService {
 
         this.messages = this.messages.map(item => {
             if (item.id === id) {
-                const includeComments = Object.keys(payload).includes('comments')
-                if (includeComments) {
-                    if (payload.comments && payload.comments.length > 0) {
+                const includeReactions = Object.keys(payload).includes('reactions')
+                if (includeReactions) {
+                    if (payload.reactions && payload.reactions.length > 0) {
                         item = {
                             ...item,
-                            ...item.comments.push(payload.comments[0])
+                            ...item.reactions.push(payload.reactions[0])
                         }
                     }
                 }

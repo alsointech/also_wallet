@@ -26,9 +26,7 @@ import config from './config';
     MessagesModule,
     AuthModule,
     CommonModule,
-    CommentsModule
+    CommentsModule,
   ],
-  // controllers: [CommonController],
-  // providers: [],
 })
 export class AppModule { }

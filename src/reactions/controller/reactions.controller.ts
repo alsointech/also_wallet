@@ -1,22 +1,20 @@
 import { Body, Controller, Get, Param, ParseIntPipe, Patch } from '@nestjs/common';
 import { MessagesService } from '../../messages/service/messages.service'
 import { json } from 'stream/consumers';
-import { CommentsService } from '../service/comments.service';
+import { ReactionsService } from '../service/reactions.service';
 
 
 @Controller('/wires/messages/comment')
 // wires/messages/comment/${id} 
 
-export class CommentsController {
-    // constructor(private messagesService: MessagesService) { }
-    constructor(private commentsService: CommentsService) { }
+export class ReactionsController {
+    constructor(private reactionsService: ReactionsService) { }
 
     @Get(':id')
     createComment(
         @Param('id', ParseIntPipe) id: number,
         @Body() payload: any
     ) {
-        // return this.messagesService.update(id, {comments: [payload]})
-        return this.commentsService.create(id, {comments: [payload]})
+        return this.reactionsService.create(id, {rections: [payload]})
     }
 }

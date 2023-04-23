@@ -33,7 +33,7 @@ console.log(alejo);
      */
 
 
-const payload = {
+/* const payload = {
     coments: [
         {
             comment: "first comment"
@@ -42,3 +42,16 @@ const payload = {
 }
 const objKeys = Object.keys(payload).includes('comments');
 console.log(objKeys);
+ */
+
+let a = 1;
+const function1 = function() {
+  console.log(a);
+  a = 2
+}
+a = 3;
+const function2 = function() {
+  console.log(a);
+}
+function1();
+function2()

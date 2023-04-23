@@ -7,7 +7,7 @@ export class Message {
     title: string
     text: string
     comments: any
-    // reactions: string[]
+    reactions: any
     // createdAt: string
     visible: boolean
 }
