@@ -213,19 +213,6 @@
 			"name": "reactions",
 			"item": [
 				{
-					"name": "todo-get_messages",
-					"id": "31daf719-4a4e-4831-acda-241049dae8ef",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/wires/messages/"
-					},
-					"response": []
-				},
-				{
 					"name": "todo-get_message",
 					"id": "e36e5190-c55b-4ab6-98f9-4b3cfe2a8bd9",
 					"protocolProfileBehavior": {
