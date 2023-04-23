@@ -45,7 +45,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\",\r\n}",
+							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
