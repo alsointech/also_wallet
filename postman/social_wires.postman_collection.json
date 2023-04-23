@@ -235,28 +235,6 @@
 					"response": []
 				},
 				{
-					"name": "todo-update_message",
-					"id": "61775ed4-0c26-4414-8978-640184bbe923",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}/wires/messages/2"
-					},
-					"response": []
-				},
-				{
 					"name": "todo-get_my_messages",
 					"id": "791252d2-cb08-4728-8260-fd9329271873",
 					"protocolProfileBehavior": {
