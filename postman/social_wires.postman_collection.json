@@ -235,19 +235,6 @@
 					"response": []
 				},
 				{
-					"name": "todo-delete_message",
-					"id": "94307e0b-3b80-437e-9062-c4fcad3eaa12",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PATCH",
-						"header": [],
-						"url": "{{base_url}}/wires/messages/1"
-					},
-					"response": []
-				},
-				{
 					"name": "todo-update_message",
 					"id": "61775ed4-0c26-4414-8978-640184bbe923",
 					"protocolProfileBehavior": {
