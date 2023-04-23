@@ -213,7 +213,7 @@
 			"name": "reactions",
 			"item": [
 				{
-					"name": "create_comment",
+					"name": "create_reaction",
 					"id": "69b3c5b0-2fb5-41aa-892d-4c809a4d2560",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
