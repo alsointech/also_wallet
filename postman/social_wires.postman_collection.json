@@ -233,19 +233,6 @@
 						"url": "{{base_url}}/wires/messages/comment/1"
 					},
 					"response": []
-				},
-				{
-					"name": "todo-get_my_messages",
-					"id": "791252d2-cb08-4728-8260-fd9329271873",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/wires/messages/me"
-					},
-					"response": []
 				}
 			],
 			"id": "3effc15d-5633-494e-aa52-798d07d755c3"
