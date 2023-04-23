@@ -210,6 +210,108 @@
 			"id": "86525015-0e37-4b19-8117-7017494395cf"
 		},
 		{
+			"name": "reactions",
+			"item": [
+				{
+					"name": "todo-get_messages",
+					"id": "31daf719-4a4e-4831-acda-241049dae8ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-get_message",
+					"id": "e36e5190-c55b-4ab6-98f9-4b3cfe2a8bd9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create_comment",
+					"id": "69b3c5b0-2fb5-41aa-892d-4c809a4d2560",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"hello comment world integration\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/comment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-delete_message",
+					"id": "94307e0b-3b80-437e-9062-c4fcad3eaa12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-update_message",
+					"id": "61775ed4-0c26-4414-8978-640184bbe923",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/2"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-get_my_messages",
+					"id": "791252d2-cb08-4728-8260-fd9329271873",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/me"
+					},
+					"response": []
+				}
+			],
+			"id": "3effc15d-5633-494e-aa52-798d07d755c3"
+		},
+		{
 			"name": "auth",
 			"item": [
 				{
