@@ -78,3 +78,13 @@ Nest is [MIT licensed](LICENSE).
 - create gett comments by message
 - create get messages by user
 - create get messages by myuser
+- isComment typo in dto ?
+
+
+## docker commands
+- On
+Off 
+Logs
+
+
+

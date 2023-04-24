@@ -1,7 +1,7 @@
-interface IComment {
+interface IReaction {
     reaction: string
 }
 
 export class Rections {
-    reactions: IComment[]
+    reactions: IReaction[]
 }

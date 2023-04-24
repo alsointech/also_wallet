@@ -1,7 +1,3 @@
-interface IComment {
+export class Comment {
     comment: string
-}
-
-export class Comments {
-    comments: IComment[]
 }

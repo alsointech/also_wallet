@@ -1,3 +1,5 @@
+import { Comment } from "src/comments/entity/comment.entity"
+
 export class Message {
     /* constructor(parameters) {
         
@@ -6,7 +8,7 @@ export class Message {
     // user: string
     title: string
     text: string
-    comments: any
+    comments: Comment[]
     reactions: any
     // createdAt: string
     visible: boolean

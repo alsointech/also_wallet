@@ -3,6 +3,8 @@
 // access class attributes by usint "this"
 // class attributes are public by difault
 
+import { Message } from "src/messages/entity/messages.entity";
+
 /** 
  * @description - first way to create private attributes
 
@@ -44,7 +46,7 @@ const objKeys = Object.keys(payload).includes('comments');
 console.log(objKeys);
  */
 
-let a = 1;
+/* let a = 1;
 const function1 = function() {
   console.log(a);
   a = 2
@@ -54,4 +56,19 @@ const function2 = function() {
   console.log(a);
 }
 function1();
-function2()
+function2() */
+
+/* const message: Message = {
+    id: 1,
+    title: 'hello',
+    text: 'world',
+    comments: [{
+        comment: 'hello'
+    }],
+    reactions: '',
+    visible: true
+}
+
+console.log(message);
+console.log(typeof(message.comments[0].comment));
+ */
