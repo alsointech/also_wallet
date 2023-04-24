@@ -223,14 +223,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"comment\": \"hello comment world integration\"\r\n}",
+							"raw": "{\r\n    \"reaction\": \"U+1F600\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/comment/1"
+						"url": "{{base_url}}/wires/messages/reaction/1"
 					},
 					"response": []
 				}
