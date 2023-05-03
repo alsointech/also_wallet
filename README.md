@@ -79,12 +79,19 @@ Nest is [MIT licensed](LICENSE).
 - create get messages by user
 - create get messages by myuser
 - isComment typo in dto ?
+- do not initiate the project if config env are not set
 
 
 ## docker commands
+- raise the service
+```bash
+docker-compose up -d postgres
+```
+
+docker-compose ps
+docker-compose down
 - On
+
+
 Off 
 Logs
-
-
-

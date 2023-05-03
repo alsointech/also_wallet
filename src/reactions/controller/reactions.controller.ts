@@ -4,7 +4,7 @@ import { json } from 'stream/consumers';
 import { ReactionsService } from '../service/reactions.service';
 
 
-@Controller('/wires/messages/comment')
+@Controller('/wires/messages/reaction')
 // wires/messages/comment/${id} 
 
 export class ReactionsController {
@@ -15,6 +15,6 @@ export class ReactionsController {
         @Param('id', ParseIntPipe) id: number,
         @Body() payload: any
     ) {
-        return this.reactionsService.create(id, {rections: [payload]})
+        return this.reactionsService.create(id, {reactions: [payload]})
     }
 }

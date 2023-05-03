@@ -1,4 +1,5 @@
 import { Comment } from "src/comments/entity/comment.entity"
+import { Reaction } from "src/reactions/entity/reactions.entity"
 
 export class Message {
     /* constructor(parameters) {
@@ -9,7 +10,7 @@ export class Message {
     title: string
     text: string
     comments: Comment[]
-    reactions: any
+    reactions: Reaction[]
     // createdAt: string
     visible: boolean
 }

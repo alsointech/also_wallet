@@ -4,7 +4,8 @@ import { MessagesService } from 'src/messages/service/messages.service';
 
 @Injectable()
 export class CommentsService {
-    private messages: Message[]
+    // to do
+    private messages: any
     constructor(
         private messagesService: MessagesService
     ) { }

@@ -1,7 +1,3 @@
-interface IReaction {
+export class Reaction {
     reaction: string
-}
-
-export class Rections {
-    reactions: IReaction[]
 }

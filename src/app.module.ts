@@ -10,6 +10,7 @@ import { AuthModule } from './auth/auth.module';
 import { CommentsModule } from './comments/comments.module';
 import { environments } from './environments';
 import config from './config';
+import { ReactionsModule } from './reactions/reactions.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import config from './config';
     AuthModule,
     CommonModule,
     CommentsModule,
+    ReactionsModule
   ],
 })
 export class AppModule { }

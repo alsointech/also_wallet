@@ -1,0 +1,14 @@
+version: '3.3'
+
+services: 
+  postgres:
+    image: postgres
+    environment:
+      - DATABASE_NAME=social_app
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=123456
+      - DATABASE_PORT=8091
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
