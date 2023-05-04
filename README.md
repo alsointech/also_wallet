@@ -83,15 +83,30 @@ Nest is [MIT licensed](LICENSE).
 
 
 ## docker commands
-- raise the service
+
+1. Start docker
+
+2. raise the service
 ```bash
 docker-compose up -d postgres
 ```
 
+3. check status service
+```bash
 docker-compose ps
+```
+
+4. check logs of build
+```bash
+docker-compose logs
+```
+
+5. stop container
+```bash
 docker-compose down
+```
+
+
 - On
-
-
 Off 
 Logs

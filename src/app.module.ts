@@ -20,6 +20,7 @@ import { ReactionsModule } from './reactions/reactions.module';
       isGlobal: true,
       // validations on env variables types and exists
       validationSchema: Joi.object({
+        API_KEY: Joi.number().required(),
         DATABASE_NAME: Joi.string().required(),
         DATABASE_PORT: Joi.number().required()
       })
