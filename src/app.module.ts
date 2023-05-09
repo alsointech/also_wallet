@@ -11,6 +11,8 @@ import { CommentsModule } from './comments/comments.module';
 import { environments } from './environments';
 import config from './config';
 import { ReactionsModule } from './reactions/reactions.module';
+import { DatabaseModule } from './database/database.module';
+
 
 @Module({
   imports: [
@@ -29,7 +31,8 @@ import { ReactionsModule } from './reactions/reactions.module';
     AuthModule,
     CommonModule,
     CommentsModule,
-    ReactionsModule
+    ReactionsModule,
+    DatabaseModule
   ],
 })
 export class AppModule { }

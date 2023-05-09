@@ -1,9 +1,13 @@
-import { HttpException, HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
+import { HttpException, HttpStatus, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { Message } from '../entity/messages.entity';
 import { CreateMessageDto, UpdateMessageDto } from '../dto/messages.dto';
+import { Client } from 'pg';
 
 @Injectable()
 export class MessagesService {
+    constructor(
+        @Inject('PG') private dbClient: Client,
+    ) { }
     private id = 1
     private messages: Message[] = [
         {
@@ -19,7 +23,15 @@ export class MessagesService {
     ]
 
     findAll() {
-        return this.messages
+        // return this.messages  
+        return new Promise((resolve, reject) => {
+            this.dbClient.query('SELECT * FROM messages', (error, response) => {
+                if (error) {
+                    reject(error)
+                }
+                resolve(response.rows);
+            })
+        })
     }
 
     findOne(id: number) {

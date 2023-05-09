@@ -99,14 +99,33 @@ docker-compose ps
 4. check logs of build
 ```bash
 docker-compose logs
+docker-compose logs -f postgres
 ```
 
-5. stop container
+5. access container
+```bash
+docker-compose exec postgres bash
+```
+
+6. stop container
 ```bash
 docker-compose down
 ```
+
+7. sql
+```bash
+psql -h localhost -d social_app -U root
+```
+
+8. sql
+```bash
+\d+
+```
+
+
 
 
 - On
 Off 
 Logs
+
