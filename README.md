@@ -88,18 +88,18 @@ Nest is [MIT licensed](LICENSE).
 
 2. raise the service
 ```bash
-docker-compose up -d postgres
+sudo docker-compose up -d postgres
 ```
 
 3. check status service
 ```bash
-docker-compose ps
+sudo docker-compose ps
 ```
 
 4. check logs of build
 ```bash
-docker-compose logs
-docker-compose logs -f postgres
+sudo docker-compose logs
+sudo docker-compose logs -f postgres
 ```
 
 5. access container
@@ -109,7 +109,7 @@ docker-compose exec postgres bash
 
 6. stop container
 ```bash
-docker-compose down
+sudo docker-compose down
 ```
 
 7. sql
