@@ -32,6 +32,18 @@
 $ npm install
 ```
 
+> create your `.env` file and set up the following variables:
+```
+DATABASE_NAME
+DATABASE_PORT
+POSTGRES_DB
+POSTGRES_PORT
+POSTGRES_PASSWORD
+POSTGRES_PORT
+POSTGRES_HOST
+API_KEY
+```
+
 ## Running the app
 
 ```bash
@@ -56,6 +68,18 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
+```
+
+## Contribute
+
+```bash
+# get this repo to your machine
+git clone https://github.com/afrancocedeno/also_wallet.git
+```
+
+```bash
+# set the development branch to dev
+git checkout dev
 ```
 
 ## Support
@@ -104,7 +128,9 @@ sudo docker-compose logs -f postgres
 
 5. access container
 ```bash
+# access manually
 docker-compose exec postgres bash
+psql -d social_app
 ```
 
 6. stop container

@@ -1,18 +1,10 @@
 import { Module, Global } from '@nestjs/common';
+import { ConfigType } from '@nestjs/config';
 import { Client } from 'pg';
+import config from '../config';
 
 const API_KEY = '123456';
 const API_KEY_PROD = 'PROD1212121SA';
-
-const dbClient = new Client({
-    user: 'root',
-    host: 'localhost',
-    database: 'social_app',
-    password: '123456',
-    port: 5432
-})
-
-dbClient.connect()
 
 @Global()
 @Module({
@@ -23,7 +15,19 @@ dbClient.connect()
         },
         {
             provide: 'PG',
-            useFactory: dbClient,
+            useFactory: (configService: ConfigType<typeof config>) => {
+                const {name, port, password, user, host} = configService.postgres;
+                const dbClient = new Client({
+                    database: name,
+                    port,
+                    password,
+                    user,
+                    host
+                })
+                
+                dbClient.connect()
+            },
+            inject: [config.KEY]
         },
     ],
     exports: ['API_KEY', 'PG'],
