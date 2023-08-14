@@ -4,7 +4,7 @@ services:
   postgres:
     image: postgres
     environment:
-      - POSTGRES_DB=social_app
+      - POSTGRES_DB=also_wallet
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=123456
     ports:

@@ -130,7 +130,7 @@ sudo docker-compose logs -f postgres
 ```bash
 # access manually
 docker-compose exec postgres bash
-psql -d social_app
+psql -d also_wallet
 ```
 
 6. stop container
@@ -140,7 +140,7 @@ sudo docker-compose down
 
 7. sql
 ```bash
-psql -h localhost -d social_app -U root
+psql -h localhost -d also_wallet -U root
 ```
 
 8. sql
@@ -148,7 +148,9 @@ psql -h localhost -d social_app -U root
 \d+
 ```
 
-
+### tools
+> postman
+> tableplus
 
 
 - On
