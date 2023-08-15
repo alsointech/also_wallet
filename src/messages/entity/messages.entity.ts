@@ -3,7 +3,6 @@ import { Reaction } from "src/reactions/entity/reactions.entity"
 
 export class Message {
     /* constructor(parameters) {
-        
     } */
     id: number
     // user: string
