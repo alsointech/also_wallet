@@ -57,7 +57,7 @@
 					"response": []
 				},
 				{
-					"name": "delete_message",
+					"name": "delete_investments",
 					"id": "84140e48-da95-46ac-882c-06faf2314934",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
