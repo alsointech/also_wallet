@@ -45,14 +45,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \r\n}",
+							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click blue\",\r\n    \"ammount\": 5000000\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/"
+						"url": "{{base_url}}/investments/"
 					},
 					"response": []
 				},
