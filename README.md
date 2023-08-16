@@ -1,12 +1,5 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
+  <p align="left">A potential app to manage an investment portfolio, capable of centralize all types of investments.</p>
+    <p align="left">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
@@ -16,8 +9,8 @@
 <a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
 <a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
   <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+<!--     <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a> -->
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
@@ -26,13 +19,26 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+## Availavle branches
+please visit: 
+- dev
+- main
+
 ## Installation
+
+```bash
+git clone https://github.com/afrancocedeno/social-app-backend
+```
+
+```bash
+git checkout dev
+```
 
 ```bash
 $ npm install
 ```
 
-> create your `.env` file and set up the following variables:
+create your `.env` file and set up the following variables:
 ```
 DATABASE_NAME
 DATABASE_PORT
@@ -79,36 +85,12 @@ git clone https://github.com/afrancocedeno/also_wallet.git
 
 ```bash
 # set the development branch to dev
-git checkout dev
+git checkout <feature/your_feature>
 ```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-
-## things to master
-
-- how to response the same orders in keys for each object
-- create gett comments by message
-- create get messages by user
-- create get messages by myuser
-- isComment typo in dto ?
-- do not initiate the project if config env are not set
-
 
 ## docker commands
 
-1. Start docker
+1. Start docker desktop (for this we are using WSL)
 
 2. raise the service
 ```bash
@@ -148,12 +130,28 @@ psql -h localhost -d also_wallet -U root
 \d+
 ```
 
-### tools
+### tools used
 > postman
 > tableplus
 
+### things to master
+- how to response the same orders in keys for each object
+- create gett comments by message
+- create get messages by user
+- create get messages by myuser
+- isComment typo in dto ?
+- do not initiate the project if config env are not set
 
-- On
-Off 
-Logs
+## Support
+
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+## Stay in touch
+
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Linkedin - [@afrancocedeno](https://www.linkedin.com/in/afrancocedeno/)
+
+## License
+
+Nest is [MIT licensed](LICENSE).
 
