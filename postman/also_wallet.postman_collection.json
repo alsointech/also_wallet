@@ -35,6 +35,19 @@
 					"response": []
 				},
 				{
+					"name": "get_msg_by_id",
+					"id": "e5a26fe2-5267-45b6-9a26-8a9bd80da0ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/investments/1"
+					},
+					"response": []
+				},
+				{
 					"name": "create_investment",
 					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
 					"protocolProfileBehavior": {
