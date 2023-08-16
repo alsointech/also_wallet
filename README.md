@@ -148,7 +148,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Author - Alejandro Franco Cedeño
 - Linkedin - [@afrancocedeno](https://www.linkedin.com/in/afrancocedeno/)
 
 ## License

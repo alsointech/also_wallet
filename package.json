@@ -1,5 +1,5 @@
 {
-  "name": "social-app-backend",
+  "name": "also-wallet-backend",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -21,8 +21,15 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.3.1",
     "@nestjs/core": "^9.0.0",
+    "@nestjs/mapped-types": "^1.2.2",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/swagger": "^6.3.0",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "joi": "^17.9.1",
+    "pg": "^8.10.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
@@ -33,6 +40,7 @@
     "@types/express": "^4.17.13",
     "@types/jest": "29.5.0",
     "@types/node": "18.15.11",
+    "@types/pg": "^8.6.6",
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
@@ -65,5 +73,8 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

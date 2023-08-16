@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "54aef189-94c2-4102-948f-2470269cbf40",
+		"name": "social-wires",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "messages",
+			"item": [
+				{
+					"name": "get_messages",
+					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "get_message",
+					"id": "9b2d06b9-9ea6-4067-bc0f-29b6e39f49c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create_message",
+					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_message",
+					"id": "84140e48-da95-46ac-882c-06faf2314934",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update_message",
+					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "get_my_messages",
+					"id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/me"
+					},
+					"response": []
+				}
+			],
+			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "todo-get_messages",
+					"id": "69d8d4c4-7e97-4870-bfc7-308d53284712",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-get_message",
+					"id": "1cded7f1-5a09-47d2-81ff-7c8441c003c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "create_comment",
+					"id": "ac04e891-8760-48f1-a774-55b77a8c8586",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\": \"hello comment world integration\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/comment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-delete_message",
+					"id": "95a7605e-758a-4aba-a025-37a5ad5ad30d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/1"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-update_message",
+					"id": "10793d68-2709-4bf0-a989-e571964435cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/2"
+					},
+					"response": []
+				},
+				{
+					"name": "todo-get_my_messages",
+					"id": "4fab99d7-8787-41c3-ad69-526a9355035f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/me"
+					},
+					"response": []
+				}
+			],
+			"id": "86525015-0e37-4b19-8117-7017494395cf"
+		},
+		{
+			"name": "reactions",
+			"item": [
+				{
+					"name": "create_reaction",
+					"id": "69b3c5b0-2fb5-41aa-892d-4c809a4d2560",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"reaction\": \"U+1F600\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/messages/reaction/1"
+					},
+					"response": []
+				}
+			],
+			"id": "3effc15d-5633-494e-aa52-798d07d755c3"
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "get_messages",
+					"id": "7146584e-a6d9-4ff5-98f5-1721983d6e05",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/wires/messages/"
+					},
+					"response": []
+				},
+				{
+					"name": "get_message",
+					"id": "689f0c75-85a8-4afb-8ca4-a61908013a4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/wires/messages/1?id=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"wires",
+								"messages",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create_user",
+					"id": "39cd3521-4a03-4d59-93b6-b2df08e98180",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"afrancocedeno\",\r\n    \"email\": \"alejo@mail.com\",\r\n    \"password\": \"123abc\",\r\n    \"fullName\": \"Alejandro Franco Cedeño\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/wires/auth/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "get_my_messages",
+					"id": "a555f94f-f224-4179-bef4-8482d92b6f56",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/wires/messages/me"
+					},
+					"response": []
+				}
+			],
+			"id": "8a404e73-3d3d-48fa-b2e8-0e89c4121b01"
+		}
+	]
+}
