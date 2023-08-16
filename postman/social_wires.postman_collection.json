@@ -9,7 +9,7 @@
 			"name": "messages",
 			"item": [
 				{
-					"name": "get_messages",
+					"name": "get_investments",
 					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
