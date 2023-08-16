@@ -78,7 +78,7 @@
 					"request": {
 						"method": "PATCH",
 						"header": [],
-						"url": "{{base_url}}/wires/messages/1"
+						"url": "{{base_url}}/investments/2"
 					},
 					"response": []
 				},
