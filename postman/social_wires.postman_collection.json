@@ -35,7 +35,7 @@
 					"response": []
 				},
 				{
-					"name": "create_message",
+					"name": "create_investment",
 					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
