@@ -1,32 +1,58 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { isNotEmpty } from 'class-validator';
 
 @Injectable()
 export class InvestmentsService {
     private id = 1
-    private messages = [
+    private investments = [
         {
             id: this.id,
-            invType: "renta fija",
-            createdAt: "2023-01-10",
+            invType: "renta_fija",
             description: "click green",
+            ammount: 5000000,
+            createdAt: "2023-01-10",
             visible: true,
         }
     ]
 
+    findOne(id: number) {
+        const investment = this.investments.find((item) => item.id === id);
+        if (!investment) {
+            throw new NotFoundException(`investment #${id} not found`);
+        }
+        return investment;
+    }
+
     findAll() {
-        return this.messages
+        return this.investments
     }
 
     create(payload: any) {
         ++this.id
-        const newMessage: any = {
+        const newInvestment: any = {
             id: this.id,
             ...payload,
-            createdAt: "2023-01-10",
+            createdAt: "2023-01-12",
             visible: true
         }
-        this.messages.push(newMessage)
+        this.investments.push(newInvestment)
 
-        return newMessage
+        return newInvestment
+    }
+
+    delete(id: number) {
+
+        this.investments = this.investments.map(item => {
+            if (item.id == id) {
+                // item.visible = false
+                return {
+                    ...item,
+                    visible: false
+                }
+            } else {
+                return item
+            }
+        })
+        return this.investments
     }
 }

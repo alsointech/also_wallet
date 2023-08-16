@@ -3,7 +3,8 @@
 export class Investment {
     id: number
     invType: string
-    createDate: string
     description: string
+    ammount: number
+    createDate: string
     visible: boolean
 }

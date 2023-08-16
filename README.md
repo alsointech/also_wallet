@@ -131,8 +131,9 @@ psql -h localhost -d also_wallet -U root
 ```
 
 ### tools used
-> postman
+> postman (linked to github)
 > tableplus
+> [shortcut](app.shortcut.com) - project management
 
 ### things to master
 - how to response the same orders in keys for each object

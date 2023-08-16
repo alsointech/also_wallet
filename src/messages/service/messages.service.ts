@@ -23,15 +23,15 @@ export class MessagesService {
     ]
 
     findAll() {
-        // return this.messages  
-        return new Promise((resolve, reject) => {
+        return this.messages  
+/*         return new Promise((resolve, reject) => {
             this.dbClient.query('SELECT * FROM messages', (error, response) => {
                 if (error) {
                     reject(error)
                 }
                 resolve(response.rows);
             })
-        })
+        }) */
     }
 
     findOne(id: number) {

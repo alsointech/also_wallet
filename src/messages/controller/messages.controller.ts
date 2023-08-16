@@ -22,6 +22,7 @@ export class MessagesController {
 
   @Get(':id')
   getMessageById(@Param('id', ParseIntPipe) id: number) {
+    console.log('id '+ id);
     return this.messagesService.findOne(id)
   }
 
