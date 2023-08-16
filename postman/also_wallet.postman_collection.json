@@ -108,34 +108,6 @@
 			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
 		},
 		{
-			"name": "reactions",
-			"item": [
-				{
-					"name": "create_reaction",
-					"id": "69b3c5b0-2fb5-41aa-892d-4c809a4d2560",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"reaction\": \"U+1F600\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}/wires/messages/reaction/1"
-					},
-					"response": []
-				}
-			],
-			"id": "3effc15d-5633-494e-aa52-798d07d755c3"
-		},
-		{
 			"name": "auth",
 			"item": [
 				{
