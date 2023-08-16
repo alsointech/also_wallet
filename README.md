@@ -45,7 +45,7 @@ git checkout dev
 $ npm install
 ```
 
-> create your `.env` file and set up the following variables:
+create your `.env` file and set up the following variables:
 ```
 DATABASE_NAME
 DATABASE_PORT
