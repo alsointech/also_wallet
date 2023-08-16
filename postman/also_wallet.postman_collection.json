@@ -22,7 +22,7 @@
 					"response": []
 				},
 				{
-					"name": "get_message",
+					"name": "get_investment_by_id",
 					"id": "9b2d06b9-9ea6-4067-bc0f-29b6e39f49c3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
