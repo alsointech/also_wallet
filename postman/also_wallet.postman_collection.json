@@ -30,7 +30,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/wires/messages/1"
+						"url": "{{base_url}}/investments/1"
 					},
 					"response": []
 				},
