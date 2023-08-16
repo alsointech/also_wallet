@@ -17,7 +17,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/wires/messages/"
+						"url": "{{base_url}}/investments/"
 					},
 					"response": []
 				},
