@@ -44,7 +44,6 @@ export class InvestmentsService {
 
         this.investments = this.investments.map(item => {
             if (item.id == id) {
-                // item.visible = false
                 return {
                     ...item,
                     visible: false
