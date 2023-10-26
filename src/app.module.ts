@@ -13,6 +13,7 @@ import config from './config';
 import { ReactionsModule } from './reactions/reactions.module';
 import { DatabaseModule } from './database/database.module';
 import { InvestmentsModule } from './investments/investments.module';
+import { InvestmentModule } from './investment/investment.module';
 
 
 @Module({
@@ -39,7 +40,8 @@ import { InvestmentsModule } from './investments/investments.module';
     CommentsModule,
     ReactionsModule,
     DatabaseModule,
-    InvestmentsModule
+    InvestmentsModule,
+    InvestmentModule
   ],
 })
 export class AppModule { }
