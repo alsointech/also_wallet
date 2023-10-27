@@ -17,7 +17,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investments/"
+						"url": "{{base_url}}/investment"
 					},
 					"response": []
 				},
@@ -65,7 +65,7 @@
 								}
 							}
 						},
-						"url": "{{base_url}}/investments/"
+						"url": "{{base_url}}/investment/"
 					},
 					"response": []
 				},
