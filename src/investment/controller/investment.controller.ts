@@ -11,11 +11,11 @@ export class InvestmentController {
   constructor(private readonly investmentService: InvestmentService) {}
 
   @Post()
-  create(@Body() createInvestmentDto: CreateInvestmentDto) {
+  create(@Body() createInvestmentDto: any) {
     return this.investmentService.create(createInvestmentDto);
   }
 
-  @Get()
+  @Get('')
   @ApiOperation({ summary: 'list all investments' })
   findAll() {
     return this.investmentService.findAll();

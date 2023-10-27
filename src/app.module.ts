@@ -12,7 +12,6 @@ import { environments } from './environments';
 import config from './config';
 import { ReactionsModule } from './reactions/reactions.module';
 import { DatabaseModule } from './database/database.module';
-import { InvestmentsModule } from './investments/investments.module';
 import { InvestmentModule } from './investment/investment.module';
 
 
@@ -40,7 +39,6 @@ import { InvestmentModule } from './investment/investment.module';
     CommentsModule,
     ReactionsModule,
     DatabaseModule,
-    InvestmentsModule,
     InvestmentModule
   ],
 })

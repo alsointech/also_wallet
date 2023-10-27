@@ -45,7 +45,7 @@ DATABASE_PORT
 POSTGRES_DB
 POSTGRES_PORT
 POSTGRES_PASSWORD
-POSTGRES_PORT
+POSTGRES_USER
 POSTGRES_HOST
 API_KEY
 ```
@@ -127,6 +127,7 @@ psql -h localhost -d also_wallet -U root
 
 8. sql
 ```bash
+# list all relations
 \d+
 ```
 
