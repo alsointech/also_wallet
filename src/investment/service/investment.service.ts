@@ -8,9 +8,9 @@ import { error } from 'console';
 @Injectable()
 export class InvestmentService {
   constructor(
-    @Inject('PG') private dbClient: Client,
-  ) { }
-  private id = 1
+    @Inject('PG') private client: Client,
+  ) {}
+  /* private id = 1
   private investments = [
     {
       id: this.id,
@@ -19,9 +19,9 @@ export class InvestmentService {
       description: "click green",
       visible: true,
     }
-  ]
+  ] */
 
-  create(payload: any) {
+  /* create(payload: any) {
     ++this.id
     const newMessage: any = {
       id: this.id,
@@ -32,11 +32,23 @@ export class InvestmentService {
     this.investments.push(newMessage)
 
     return newMessage
-  }
+  } */
 
   findAll() {
-    /*     return new Promise((resolve, reject) => {
-          this.dbClient.query(
+    // console.log('client: ' + JSON.stringify(this.client, undefined, 4));
+    
+          /* this.client.query(
+            'SELECT * FROM investments',
+            (err, res) => {
+              // err ? reject(res) : resolve(res.rows)
+              if (err) {
+                console.error('error' + err)
+              }
+              console.log(res.rows)
+            }
+          ) */
+        return new Promise((resolve, reject) => {
+          this.client.query(
             'SELECT * FROM investments',
             (err, res) => {
               // err ? reject(res) : resolve(res.rows)
@@ -46,12 +58,7 @@ export class InvestmentService {
               resolve(res.rows)
             }
           )
-        }) */
-        console.log('user: ' + this.dbClient.user);
-        
-     this.dbClient.user
-
-
+        })
   }
 
   findOne(id: number) {

@@ -9,11 +9,11 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 @Controller('investment')
 export class InvestmentController {
   constructor(private readonly investmentService: InvestmentService) {}
-
+/* 
   @Post()
   create(@Body() createInvestmentDto: any) {
     return this.investmentService.create(createInvestmentDto);
-  }
+  } */
 
   @Get('')
   @ApiOperation({ summary: 'list all investments' })
