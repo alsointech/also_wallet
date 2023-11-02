@@ -16,10 +16,13 @@ export class InvestmentService {
 
 
   create(payload: CreateInvestmentDto) {
+    const newInvestment = new Investment()
+    newInvestment.invType = payload.invType
+    newInvestment.description = payload.description
+    newInvestment.ammount = payload.ammountType
 
 
-
-    return newMessage
+    return newInvestment
   }
 
 
