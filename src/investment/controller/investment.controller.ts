@@ -22,7 +22,7 @@ export class InvestmentController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.investmentService.findOne(+id);
   }
 

@@ -1,68 +1,52 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import { CreateInvestmentDto } from '../dto/create-investment.dto';
-import { UpdateInvestmentDto } from '../dto/update-investment.dto';
 import { Client } from 'pg';
-import { rejects } from 'assert';
-import { error } from 'console';
+import { Repository } from 'typeorm';
+
+import { UpdateInvestmentDto } from '../dto/update-investment.dto';
+import { Investment } from '../entities/investment.entity';
 
 @Injectable()
 export class InvestmentService {
   constructor(
+    @InjectRepository(Investment) private investmentRepo: Repository<Investment>,
     @Inject('PG') private client: Client,
-  ) {}
-  /* private id = 1
-  private investments = [
-    {
-      id: this.id,
-      invType: "renta fija",
-      createdAt: "2023-01-10",
-      description: "click green",
-      visible: true,
-    }
-  ] */
+  ) { }
 
-  /* create(payload: any) {
-    ++this.id
-    const newMessage: any = {
-      id: this.id,
-      ...payload,
-      createdAt: "2023-01-10",
-      visible: true
-    }
-    this.investments.push(newMessage)
+
+  create(payload: CreateInvestmentDto) {
+
+
 
     return newMessage
-  } */
+  }
+
 
   findAll() {
-    // console.log('client: ' + JSON.stringify(this.client, undefined, 4));
-    
-          /* this.client.query(
-            'SELECT * FROM investments',
-            (err, res) => {
-              // err ? reject(res) : resolve(res.rows)
-              if (err) {
-                console.error('error' + err)
-              }
-              console.log(res.rows)
-            }
-          ) */
-        return new Promise((resolve, reject) => {
-          this.client.query(
-            'SELECT * FROM investments',
-            (err, res) => {
-              // err ? reject(res) : resolve(res.rows)
-              if (err) {
+    return this.investmentRepo.find()
+  }
+  /*   findAll() {
+    return new Promise((resolve, reject) => {
+      this.client.query(
+        'SELECT * FROM investments',
+        (err, res) => {
+          // err ? reject(res) : resolve(res.rows)
+          if (err) {
                 reject(err)
               }
               resolve(res.rows)
             }
-          )
-        })
-  }
+            )
+          })
+        } */
 
-  findOne(id: number) {
-    return `This action returns a #${id} investment`;
+  findOne(id: number): Promise<Investment | null> {
+    const investment = this.investmentRepo.findOneBy({ id })
+    if (!investment) {
+      throw new NotFoundException(`Investment #${id}] not found`)
+    }
+    return investment
   }
 
   update(id: number, updateInvestmentDto: UpdateInvestmentDto) {
