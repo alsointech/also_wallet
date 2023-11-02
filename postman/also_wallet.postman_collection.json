@@ -58,7 +58,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click blue\",\r\n    \"ammount\": 5000000\r\n}\r\n",
+							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -76,9 +76,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PATCH",
+						"method": "PUT",
 						"header": [],
-						"url": "{{base_url}}/investments/2"
+						"url": "{{base_url}}/investment/1"
 					},
 					"response": []
 				},
@@ -89,18 +89,18 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "PATCH",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"updated message\",\r\n    \"text\": \"mensaje de mamelita\"\r\n}",
+							"raw": "{\r\n  \"description\": \"click cyanxxx\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/1"
+						"url": "{{base_url}}/investment/4"
 					},
 					"response": []
 				},
