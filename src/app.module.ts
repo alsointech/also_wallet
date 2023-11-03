@@ -6,10 +6,8 @@ import * as Joi from 'joi';
 // modules
 import { CommonModule } from './common/common.module';
 import { AuthModule } from './auth/auth.module';
-import { CommentsModule } from './comments/comments.module';
 import { environments } from './environments';
 import config from './config';
-import { ReactionsModule } from './reactions/reactions.module';
 import { DatabaseModule } from './database/database.module';
 import { InvestmentModule } from './investment/investment.module';
 
@@ -34,8 +32,6 @@ import { InvestmentModule } from './investment/investment.module';
     }),
     AuthModule,
     CommonModule,
-    CommentsModule,
-    ReactionsModule,
     DatabaseModule,
     InvestmentModule
   ],

@@ -63,6 +63,18 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Documentation
+
+```bash
+# rise the server in watch mode
+$ npm run start:dev
+
+```
+
+from your browser you can access the follow endpoint for know more about the endpoints and documentation
+
+`localhost:3000/docs`
+
 ## Test
 
 ```bash

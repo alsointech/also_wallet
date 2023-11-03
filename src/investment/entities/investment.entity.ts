@@ -5,7 +5,7 @@ export class Investment {
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column({ type: 'varchar', length: 255, unique: true })
+    @Column({ type: 'varchar', length: 255, unique: false })
     invType: string
 
 /*     @Column({ type: 'timestamp with local time zone' })

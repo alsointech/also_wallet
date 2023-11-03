@@ -3,7 +3,7 @@
 // access class attributes by usint "this"
 // class attributes are public by difault
 
-import { Message } from "src/messages/entity/messages.entity";
+
 
 /** 
  * @description - first way to create private attributes
