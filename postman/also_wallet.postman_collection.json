@@ -30,20 +30,20 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investments/1"
+						"url": "{{base_url}}/investment/1"
 					},
 					"response": []
 				},
 				{
-					"name": "get_msg_by_id",
-					"id": "e5a26fe2-5267-45b6-9a26-8a9bd80da0ae",
+					"name": "get_my_messages",
+					"id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investments/1"
+						"url": "{{base_url}}/wires/messages/me"
 					},
 					"response": []
 				},
@@ -70,7 +70,7 @@
 					"response": []
 				},
 				{
-					"name": "delete_investments",
+					"name": "delete_investment",
 					"id": "84140e48-da95-46ac-882c-06faf2314934",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -83,7 +83,7 @@
 					"response": []
 				},
 				{
-					"name": "update_message",
+					"name": "update_investment",
 					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -101,19 +101,6 @@
 							}
 						},
 						"url": "{{base_url}}/investment/4"
-					},
-					"response": []
-				},
-				{
-					"name": "get_my_messages",
-					"id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/wires/messages/me"
 					},
 					"response": []
 				}
