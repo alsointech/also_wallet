@@ -1,4 +1,4 @@
-import { PrimaryGeneratedColumn, Column, Entity } from 'typeorm'
+import { PrimaryGeneratedColumn, Column, Entity, CreateDateColumn } from 'typeorm'
 
 @Entity()
 export class Investment {
@@ -8,7 +8,7 @@ export class Investment {
     @Column({ type: 'varchar', length: 255, unique: false })
     invType: string
 
-/*     @Column({ type: 'timestamp with local time zone' })
+    /* @CreateDateColumn({ type: 'timestamp with time zone' })
     createDate: string */
 
     // @Column({ type: 'money' })

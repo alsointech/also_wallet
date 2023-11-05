@@ -40,7 +40,6 @@ export class InvestmentService {
       throw new NotFoundException(`Investment #${id} not found`)
     }
     
-
     // overwrite the found item with requested changes
     this.investmentRepo.merge(investment, payload)
     return this.investmentRepo.save(investment)
