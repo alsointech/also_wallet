@@ -9,6 +9,28 @@
 			"name": "investments",
 			"item": [
 				{
+					"name": "create_investment",
+					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/investment/"
+					},
+					"response": []
+				},
+				{
 					"name": "get_investments",
 					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
 					"protocolProfileBehavior": {
@@ -35,54 +57,6 @@
 					"response": []
 				},
 				{
-					"name": "get_my_messages",
-					"id": "c116c5bd-6b99-4fbb-a2fd-3fc969940b26",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/wires/messages/me"
-					},
-					"response": []
-				},
-				{
-					"name": "create_investment",
-					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{base_url}}/investment/"
-					},
-					"response": []
-				},
-				{
-					"name": "delete_investment",
-					"id": "84140e48-da95-46ac-882c-06faf2314934",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"url": "{{base_url}}/investment/1"
-					},
-					"response": []
-				},
-				{
 					"name": "update_investment",
 					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
 					"protocolProfileBehavior": {
@@ -103,9 +77,111 @@
 						"url": "{{base_url}}/investment/4"
 					},
 					"response": []
+				},
+				{
+					"name": "delete_investment",
+					"id": "84140e48-da95-46ac-882c-06faf2314934",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{base_url}}/investment/1"
+					},
+					"response": []
 				}
 			],
 			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create_user",
+					"id": "0f1c4014-3407-472f-b62b-6b14164cee7d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/user/"
+					},
+					"response": []
+				},
+				{
+					"name": "get_users",
+					"id": "a18eed1c-c105-4e38-a322-4e7c1b7a3a27",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/user"
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_by_id",
+					"id": "f6fe813f-8abb-481b-8df4-e44f6e4929f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update_user",
+					"id": "15f921f8-984b-4254-9900-6f7e92035451",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"click cyanxxx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/user/4"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"id": "eec604b2-d065-481a-8bea-835545c73448",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{base_url}}/user/1"
+					},
+					"response": []
+				}
+			],
+			"id": "69ece1e9-2b5c-4236-9697-6fa7c03ca726"
 		}
 	]
 }
