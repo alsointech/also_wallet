@@ -74,4 +74,3 @@ function2() */
 console.log(message);
 console.log(typeof(message.comments[0].comment));
  */
-

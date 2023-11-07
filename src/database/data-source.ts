@@ -11,7 +11,7 @@ export default new DataSource({
   database: 'also_wallet',
   synchronize: false,
   logging: false,
-  entities: ['src/**/**/*.entity.ts'],
+  entities: ['src/**/*.entity.ts'],
   migrations: ['src/database/migrations/*.ts'],
   migrationsTableName: 'migrations',
 });

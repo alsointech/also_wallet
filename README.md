@@ -104,8 +104,18 @@ also add these lines to your package.json scripts an test them with `npm run <pc
   }
 ```
 
-## Test
+## migrations usage
+first create
+```npm run migrations:show```
+```npm run migrations:generate <path-to-migrations-dir/migration-name>```
+then run
+```npm run migrations:show```
+```npm run migrations:run```
+after making changes to entities run again
+```npm run migrations:show```
+```npm run migrations:generate <path-to-migrations-dir/migration-name>```
 
+## Test
 ```bash
 # unit tests
 $ npm run test

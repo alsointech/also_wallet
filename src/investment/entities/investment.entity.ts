@@ -1,15 +1,18 @@
-import { PrimaryGeneratedColumn, Column, Entity, CreateDateColumn } from 'typeorm'
+import { PrimaryGeneratedColumn, Column, Entity, CreateDateColumn, UpdateDateColumn } from 'typeorm'
 
 @Entity()
 export class Investment {
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column({ type: 'varchar', length: 300, unique: false })
+    @Column({ name:'investment_type', type: 'varchar', length: 255, unique: false })
     invType: string
 
-    /* @CreateDateColumn({ type: 'timestamp with time zone' })
-    createDate: string */
+    @CreateDateColumn({name:'created_at', default: () => 'LOCALTIMESTAMP' })
+    createDate: string
+
+    @UpdateDateColumn({name:'updated_at', default: () => 'LOCALTIMESTAMP' })
+    updateDate: string
 
     // @Column({ type: 'money' })
     @Column({ type: 'int' })

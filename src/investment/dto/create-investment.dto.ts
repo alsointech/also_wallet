@@ -26,4 +26,3 @@ export class CreateInvestmentDto {
     readonly description: string;
 }
 
-export class UpdateInvestmentDto extends PartialType(CreateInvestmentDto) { }

@@ -5,7 +5,7 @@ import { UpdateInvestmentDto } from '../dto/update-investment.dto';
 import { Controller, Get, Post, Body, Patch, Param, Delete, Put, ParseIntPipe } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
-@ApiTags('investments')
+@ApiTags('investment')
 @Controller('investment')
 export class InvestmentController {
   constructor(private readonly investmentService: InvestmentService) {}
@@ -39,4 +39,5 @@ export class InvestmentController {
   remove(@Param('id', ParseIntPipe) id: number) {
     return this.investmentService.remove(id);
   }
+  /* get inv by user */
 }

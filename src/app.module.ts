@@ -10,6 +10,7 @@ import { environments } from './environments';
 import config from './config';
 import { DatabaseModule } from './database/database.module';
 import { InvestmentModule } from './investment/investment.module';
+import { UserModule } from './user/user.module';
 
 
 @Module({
@@ -33,7 +34,8 @@ import { InvestmentModule } from './investment/investment.module';
     AuthModule,
     CommonModule,
     DatabaseModule,
-    InvestmentModule
+    InvestmentModule,
+    UserModule,
   ],
 })
 export class AppModule { }
