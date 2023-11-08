@@ -108,7 +108,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
+							"raw": "{\r\n  \"role\": \"admin\",\r\n  \"name\": \"Alejo\",\r\n  \"lastName\": \"Franco Cedeño\",\r\n  \"email\": \"alejo@mail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
