@@ -30,12 +30,13 @@ export class Investment {
 
     @Column({ type: 'text' })
     description: string
-
+    
     @Column({ type: 'boolean', default: true })
     visible: boolean
-
+    
     @ManyToOne(() => User, (user) => user.investments)
     /* join is not mandatory unless name modification */
     @JoinColumn({name: 'user_id'})
-    user: User
+    @Column({ name: 'user_id' })
+    userId: number
 }

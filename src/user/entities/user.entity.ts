@@ -35,7 +35,7 @@ export class User {
     @Column({ type: 'boolean', default: true })
     visible: boolean
 
-    @OneToMany(() => Investment, (investment) => investment.user)
+    @OneToMany(() => Investment, (investment) => investment.userId)
     investments: Investment[]
 
     /*

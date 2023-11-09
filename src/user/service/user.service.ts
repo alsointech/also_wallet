@@ -45,11 +45,16 @@ export class UserService {
 
 
   findAll() {
-    return this.userRepo.find()
+    return this.userRepo.find({
+      relations: ['investments']
+    })
   }
 
   async findOne(id: number): Promise<User | null> {
-    const user = await this.userRepo.findOneBy({ id })
+    const user = await this.userRepo.findOne({
+      where: { id },
+      relations: ['investments']
+    })
     if (!user) {
       throw new NotFoundException(`User #${id} not found`)
     }
@@ -61,7 +66,7 @@ export class UserService {
     if (!user) {
       throw new NotFoundException(`User #${id} not found`)
     }
-    
+
     // overwrite the found item with requested changes
     this.userRepo.merge(user, payload)
     return this.userRepo.save(user)
@@ -75,7 +80,7 @@ export class UserService {
 
     // overwrite the found item with requested changes
     this.userRepo.merge(user, { visible: false })
-    
+
     return this.userRepo.save(user)
 
     // return this.userRepo.delete(id)

@@ -2,7 +2,7 @@ import { Inject, Injectable, NotFoundException, forwardRef } from '@nestjs/commo
 import { InjectRepository } from '@nestjs/typeorm';
 import { CreateInvestmentDto } from '../dto/create-investment.dto';
 import { Client } from 'pg';
-import { Repository } from 'typeorm';
+import { FindOptionsWhere, Repository } from 'typeorm';
 
 import { UpdateInvestmentDto } from '../dto/update-investment.dto';
 import { Investment } from '../entities/investment.entity';
@@ -22,16 +22,20 @@ export class InvestmentService {
     const newInvestment = this.investmentRepo.create(payload)
     if (payload.userId) {
       const user = await this.userService.findOne(payload.userId)
-      newInvestment.user = user
+      newInvestment.userId = user.id
     }
     return this.investmentRepo.save(newInvestment)
   }
 
 
-  findAll() {
-    return this.investmentRepo.find({
-      relations: ['user']
-    })
+  findAll(params?) {
+    if (params) {
+      const where: FindOptionsWhere<Investment> = {}
+      return this.investmentRepo.find({
+        where
+      })
+    }
+    return this.investmentRepo.find()
   }
 
   async findOne(id: number): Promise<Investment | null> {

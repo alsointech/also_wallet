@@ -3,11 +3,15 @@ import { UserService } from '../service/user.service';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { InvestmentService } from 'src/investment/service/investment.service';
 
 @ApiTags('user')
 @Controller('user')
 export class UserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(
+    private readonly userService: UserService,
+    private readonly investmentService: InvestmentService
+  ) { }
 
   @Post()
   @ApiOperation({ summary: 'create user' })
@@ -25,6 +29,12 @@ export class UserController {
   @ApiOperation({ summary: 'get user by id' })
   findOne(@Param('id', ParseIntPipe) id: number) {
     return this.userService.findOne(id);
+  }
+
+  @Get(':id/investment')
+  @ApiOperation({ summary: 'get investments by user' })
+  findByUser(@Param('id', ParseIntPipe) id: number) {
+    return this.investmentService.findAll(id);
   }
 
   @Patch(':id')
