@@ -57,6 +57,19 @@
 					"response": []
 				},
 				{
+					"name": "get_invs_by_user",
+					"id": "a267b6f7-32bb-4b9c-9649-1ac7be4c1a8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/investment/1"
+					},
+					"response": []
+				},
+				{
 					"name": "update_investment",
 					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
 					"protocolProfileBehavior": {
