@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "54aef189-94c2-4102-948f-2470269cbf40",
-		"name": "social-wires",
+		"name": "also-wallet",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -9,7 +9,7 @@
 			"name": "messages",
 			"item": [
 				{
-					"name": "get_messages",
+					"name": "get_investments",
 					"id": "4bbfece5-1215-427b-a5ff-39dca131b4b7",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -17,7 +17,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/wires/messages/"
+						"url": "{{base_url}}/investments/"
 					},
 					"response": []
 				},
@@ -35,7 +35,7 @@
 					"response": []
 				},
 				{
-					"name": "create_message",
+					"name": "create_investment",
 					"id": "16b36c71-6f7c-4060-8332-0f9f86df401b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -45,14 +45,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"text\": \"this is a asc message\",\r\n    \"title\": \"my new abc\"\r\n}",
+							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click blue\",\r\n    \"ammount\": 5000000\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/wires/messages/"
+						"url": "{{base_url}}/investments/"
 					},
 					"response": []
 				},

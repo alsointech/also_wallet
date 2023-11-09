@@ -17,7 +17,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('API')
-    .setDescription('sociail app backend')
+    .setDescription('backend to manage an investment portfolio')
     .setVersion('1.0')
     .build()
   

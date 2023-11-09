@@ -2,6 +2,6 @@
     "editor.cursorBlinking": "expand",
     "editor.linkedEditing": true,
     "editor.guides.bracketPairs": true,
-    "breadcrumbs.enabled": false,
+    "breadcrumbs.enabled": true,
     "material-icon-theme.activeIconPack": "nest"
 }

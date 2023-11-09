@@ -45,10 +45,16 @@ DATABASE_PORT
 POSTGRES_DB
 POSTGRES_PORT
 POSTGRES_PASSWORD
-POSTGRES_PORT
+POSTGRES_USER
 POSTGRES_HOST
 API_KEY
 ```
+
+## list of dependencies used in this project
+```bash
+npm i 
+```
+
 
 ## Running the app
 
@@ -63,8 +69,57 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Documentation
 
+```bash
+# rise the server in watch mode
+$ npm run start:dev
+
+```
+
+from your browser you can access the follow endpoint for know more about the endpoints and documentation
+
+`localhost:3000/docs`
+
+## typeorm
+
+### create new migrations
+1. package.json
+2. command
+```bash
+npm run migrations:generate ./src/database/migration/<change_description_name>
+```
+
+please visit [TypeORM](https://typeorm.io/migrations#how-migrations-work) offitial documentation.
+
+also add these lines to your package.json scripts an test them with `npm run <pckge.json_script>`
+```json
+  "scripts": {
+    /* ... */
+    "typeorm": "typeorm-ts-node-esm -d src/<path_to>/data-source.ts",
+    "migrations:generate": "npm run typeorm -- migration:generate",
+    "migrations:run": "npm run typeorm -- migration:run",
+    "migrations:show": "npm run typeorm -- migration:show",
+    "migrations:drop": "npm run typeorm -- schema:drop"
+  }
+```
+
+##
+patron repository  -> typeorm
+
+
+## migrations usage
+first create
+```npm run migrations:show```
+```npm run migrations:generate <path-to-migrations-dir/migration-name>```
+then run
+```npm run migrations:show```
+```npm run migrations:run```
+after making changes to entities run again
+```npm run migrations:show```
+```npm run migrations:generate <path-to-migrations-dir/migration-name>```
+
+## Test
 ```bash
 # unit tests
 $ npm run test
@@ -127,6 +182,7 @@ psql -h localhost -d also_wallet -U root
 
 8. sql
 ```bash
+# list all relations
 \d+
 ```
 
