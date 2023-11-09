@@ -3,7 +3,7 @@
 // access class attributes by usint "this"
 // class attributes are public by difault
 
-import { log } from "console";
+// import { log } from "console";
 
 
 
@@ -74,3 +74,8 @@ function2() */
 console.log(message);
 console.log(typeof(message.comments[0].comment));
  */
+
+
+// const dir = `${__dirname}/../**/*.entity.ts`
+
+// console.log(dir);

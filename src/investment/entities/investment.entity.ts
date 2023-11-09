@@ -1,17 +1,27 @@
-import { PrimaryGeneratedColumn, Column, Entity, CreateDateColumn, UpdateDateColumn } from 'typeorm'
+import { User } from '../../user/entities/user.entity'
+import {
+    PrimaryGeneratedColumn,
+    Column,
+    Entity,
+    CreateDateColumn,
+    UpdateDateColumn,
+    ManyToOne,
+    JoinColumn
+} from 'typeorm'
+
 
 @Entity()
 export class Investment {
     @PrimaryGeneratedColumn()
     id: number
 
-    @Column({ name:'investment_type', type: 'varchar', length: 255, unique: false })
+    @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
     invType: string
 
-    @CreateDateColumn({name:'created_at', default: () => 'LOCALTIMESTAMP' })
+    @CreateDateColumn({ name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
     createDate: string
 
-    @UpdateDateColumn({name:'updated_at', default: () => 'LOCALTIMESTAMP' })
+    @UpdateDateColumn({ name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
     updateDate: string
 
     // @Column({ type: 'money' })
@@ -23,4 +33,9 @@ export class Investment {
 
     @Column({ type: 'boolean', default: true })
     visible: boolean
+
+    @ManyToOne(() => User, (user) => user.investments)
+    /* join is not mandatory unless name modification */
+    @JoinColumn({name: 'user_id'})
+    user: User
 }

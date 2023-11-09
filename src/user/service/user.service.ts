@@ -34,7 +34,6 @@ export class UserService {
 export class UserService {
   constructor(
     @InjectRepository(User) private userRepo: Repository<User>,
-    @Inject('PG') private client: Client,
   ) { }
 
 

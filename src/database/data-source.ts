@@ -1,7 +1,10 @@
+import { Investment } from 'src/investment/entities/investment.entity';
+import { User } from 'src/user/entities/user.entity';
+
 import { DataSource } from 'typeorm';
 
-export default new DataSource({
-// export const AppDataSource = new DataSource({
+// export default new DataSource({
+export const AppDataSource = new DataSource({
   type: 'postgres',
   // url: 'postgres:// root: 123456@ localhost: 5432/ also_wallet',
   username: 'root',
@@ -11,7 +14,8 @@ export default new DataSource({
   database: 'also_wallet',
   synchronize: false,
   logging: false,
-  entities: ['src/**/*.entity.ts'],
+  entities: ['src/user/entities/user.entity.ts', 'src/investment/entities/investment.entity.ts'],
   migrations: ['src/database/migrations/*.ts'],
   migrationsTableName: 'migrations',
 });
+

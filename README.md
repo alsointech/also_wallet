@@ -104,6 +104,10 @@ also add these lines to your package.json scripts an test them with `npm run <pc
   }
 ```
 
+##
+patron repository  -> typeorm
+
+
 ## migrations usage
 first create
 ```npm run migrations:show```

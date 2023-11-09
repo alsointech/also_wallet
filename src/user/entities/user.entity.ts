@@ -1,5 +1,15 @@
-import { PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm"
+import { Investment } from "../../investment/entities/investment.entity"
+import {
+    PrimaryGeneratedColumn,
+    Column,
+    CreateDateColumn,
+    UpdateDateColumn,
+    Entity,
+    OneToMany
+} from "typeorm"
 
+
+@Entity()
 export class User {
     @PrimaryGeneratedColumn()
     id: number
@@ -16,14 +26,17 @@ export class User {
     @Column({ type: 'varchar', length: 255, unique: false })
     email: string
 
-    @CreateDateColumn({name:'created_at', default: () => 'LOCALTIMESTAMP' })
+    @CreateDateColumn({ name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
     createDate: string
 
-    @UpdateDateColumn({name:'updated_at', default: () => 'LOCALTIMESTAMP' })
+    @UpdateDateColumn({ name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
     updateDate: string
 
     @Column({ type: 'boolean', default: true })
     visible: boolean
+
+    @OneToMany(() => Investment, (investment) => investment.user)
+    investments: Investment[]
 
     /*
     balance
