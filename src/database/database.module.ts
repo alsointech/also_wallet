@@ -12,15 +12,16 @@ import { Investment } from 'src/investment/entities/investment.entity';
         TypeOrmModule.forRootAsync({
             inject:  [config.KEY],
             useFactory: (configService: ConfigType<typeof config>) => {
-                const { dbName, port, password, user, host, url } = configService.postgres;
+                // const { dbName, port, password, user, host, url } = configService.postgres;
+                const { url } = configService.postgres;
 
                 return {
                     type: 'postgres',
-                    host,
+                    /* host,
                     port,
                     username: user,
                     password,
-                    database: dbName,
+                    database: dbName, */
                     synchronize: false,
                     autoLoadEntities: true,
                     url
