@@ -1,35 +1,43 @@
 import { Module, Global } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
-import { Client } from 'pg';
-import config from '../config';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
-const API_KEY = '123456';
-const API_KEY_PROD = 'PROD1212121SA';
+import config from '../config';
+import { User } from 'src/user/entities/user.entity';
+import { Investment } from 'src/investment/entities/investment.entity';
 
 @Global()
 @Module({
-    providers: [
-        {
-            provide: 'API_KEY',
-            useValue: process.env.NODE_ENV === 'prod' ? API_KEY_PROD : API_KEY,
-        },
-        {
-            provide: 'PG',
+    imports: [
+        TypeOrmModule.forRootAsync({
+            inject: [config.KEY],
             useFactory: (configService: ConfigType<typeof config>) => {
-                const {name, port, password, user, host} = configService.postgres;
-                const dbClient = new Client({
-                    database: name,
+                const { url } = configService.postgres;
+                return {
+                    type: 'postgres',
+                    /* host,
                     port,
+                    username: user,
                     password,
-                    user,
-                    host
-                })
-                
-                dbClient.connect()
+                    database: dbName, */
+                    synchronize: false,
+                    autoLoadEntities: true,
+                    url,
+                    ssl: {
+                        rejectUnauthorized: false
+                    }
+
+                }
             },
-            inject: [config.KEY]
-        },
+        }),
+        TypeOrmModule.forFeature([User, Investment])
     ],
-    exports: ['API_KEY', 'PG'],
+    providers: [
+        /*         {
+                    provide: 'API_KEY',
+                    useValue: process.env.NODE_ENV === 'prod' ? API_KEY_PROD : API_KEY,
+                }, */
+    ],
+    exports: [TypeOrmModule],
 })
 export class DatabaseModule { }
