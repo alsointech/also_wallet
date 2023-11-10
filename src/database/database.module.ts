@@ -13,8 +13,6 @@ import { Investment } from 'src/investment/entities/investment.entity';
             inject: [config.KEY],
             useFactory: (configService: ConfigType<typeof config>) => {
                 const { url } = configService.postgres;
-                console.log('url ' + url);
-
                 return {
                     type: 'postgres',
                     /* host,
@@ -24,7 +22,11 @@ import { Investment } from 'src/investment/entities/investment.entity';
                     database: dbName, */
                     synchronize: false,
                     autoLoadEntities: true,
-                    url
+                    url,
+                    ssl: {
+                        rejectUnauthorized: false
+                    }
+
                 }
             },
         }),
