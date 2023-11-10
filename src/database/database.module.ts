@@ -10,10 +10,10 @@ import { Investment } from 'src/investment/entities/investment.entity';
 @Module({
     imports: [
         TypeOrmModule.forRootAsync({
-            inject:  [config.KEY],
+            inject: [config.KEY],
             useFactory: (configService: ConfigType<typeof config>) => {
-                // const { dbName, port, password, user, host, url } = configService.postgres;
                 const { url } = configService.postgres;
+                console.log('url ' + url);
 
                 return {
                     type: 'postgres',
@@ -31,10 +31,10 @@ import { Investment } from 'src/investment/entities/investment.entity';
         TypeOrmModule.forFeature([User, Investment])
     ],
     providers: [
-/*         {
-            provide: 'API_KEY',
-            useValue: process.env.NODE_ENV === 'prod' ? API_KEY_PROD : API_KEY,
-        }, */
+        /*         {
+                    provide: 'API_KEY',
+                    useValue: process.env.NODE_ENV === 'prod' ? API_KEY_PROD : API_KEY,
+                }, */
     ],
     exports: [TypeOrmModule],
 })

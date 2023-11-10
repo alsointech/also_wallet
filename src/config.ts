@@ -5,17 +5,17 @@ import { registerAs } from "@nestjs/config";
  */
 export default registerAs('config', () => {
     return {
-        database: {
+        /* database: {
             dbName: process.env.DATABASE_NAME,
             port: process.env.DATABASE_PORT
-        },
+        }, */
         postgres: {
+            url: process.env.DATABASE_URL,
             /* dbName: process.env.POSTGRES_DB,
             port: parseInt(process.env.POSTGRES_PORT, 10),
             password: process.env.POSTGRES_PASSWORD,
             user: process.env.POSTGRES_USER,
             host: process.env.POSTGRES_HOST, */
-            url: process.env.POSTGRES_URL,
         },
         apiKey: process.env.API_KEY,
     }
