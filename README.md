@@ -191,12 +191,10 @@ psql -h localhost -d also_wallet -U root
 > tableplus
 
 ### things to master
-- how to response the same orders in keys for each object
-- create gett comments by message
-- create get messages by user
-- create get messages by myuser
-- isComment typo in dto ?
-- do not initiate the project if config env are not set
+
+- Frontend
+- an AI that allows to register investments or downpayments
+- an membership module to educate in all topics of the app
 
 ## Support
 
