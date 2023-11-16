@@ -23,9 +23,9 @@ import { Investment } from 'src/investment/entities/investment.entity';
                     synchronize: false,
                     autoLoadEntities: true,
                     url,
-                    ssl: {
+                    ssl: process.env.NODE_ENV === 'prod' ? {
                         rejectUnauthorized: false
-                    }
+                    } : false
 
                 }
             },
