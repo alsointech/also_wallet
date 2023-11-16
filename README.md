@@ -6,8 +6,8 @@ AlsoWallet is an app to manage your investment portfolio and control your financ
   <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
   <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
   <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-  <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-  <a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+  <a href="https://dl.circleci.com/status-badge/redirect/circleci/FJkq4GGBwCQAatFishFpVx/S1oCP4hiuw5Mwq4y1kmZHa/tree/main" target="_blank"><img src="https://dl.circleci.com/status-badge/img/circleci/FJkq4GGBwCQAatFishFpVx/S1oCP4hiuw5Mwq4y1kmZHa/tree/main.svg?style=svg" alt="CircleCI" /></a>
+  <a href="https://coveralls.io/github/afrancocedeno/also_wallet?branch=main" target="_blank"><img src="https://coveralls.io/repos/github/afrancocedeno/also_wallet/badge.svg?branch=main" alt="Coverage" /></a>
   <a href="https://opencollective.com/tambienlatino#backer" target="_blank"><img src="https://opencollective.com/tambienlatino/backers/badge.svg" alt="Backers on Open Collective" /></a>
   <a href="https://opencollective.com/tambienlatino#sponsor" target="_blank"><img src="https://opencollective.com/tambienlatino/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
   <a href="https://paypal.me/afrancocedeno?country.x=CO&locale.x=es_XC" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
