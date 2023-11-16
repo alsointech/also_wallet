@@ -14,13 +14,9 @@ AlsoWallet is an app to manage your investment portfolio and control your financ
 
 </p>
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 ## Availavle branches
-please visit: 
-- dev
+please principal branchesvisit: 
+- [dev](https://github.com/afrancocedeno/also_wallet/tree/dev)
 - main
 
 ## Installation
@@ -30,6 +26,7 @@ git clone https://github.com/afrancocedeno/social-app-backend
 ```
 
 ```bash
+# optional - you can run from main branch
 git checkout dev
 ```
 
@@ -39,6 +36,7 @@ $ npm install
 
 create your `.env` file and set up the following variables:
 ```
+<!-- DATABASE_NAME
 DATABASE_NAME
 DATABASE_PORT
 POSTGRES_DB
@@ -46,14 +44,17 @@ POSTGRES_PORT
 POSTGRES_PASSWORD
 POSTGRES_USER
 POSTGRES_HOST
-API_KEY
+API_KEY -->
+DATABASE_URL=postgres://root:123456@localhost:5432/also_wallet
+DATABASE_NAME=also_wallet
+DATABASE_PORT=5432
+API_KEY=123456
 ```
 
-## list of dependencies used in this project
+## take a look to the dependencies for this prokect on `package.json` file or list them as follows:
 ```bash
-npm i 
+npm list
 ```
-
 
 ## Running the app
 
@@ -61,7 +62,7 @@ npm i
 # development
 $ npm run start
 
-# watch mode
+# rise the server in watch mode
 $ npm run start:dev
 
 # production mode
@@ -70,17 +71,13 @@ $ npm run start:prod
 
 ## Documentation
 
-```bash
-# rise the server in watch mode
-$ npm run start:dev
+> if you are in development environment you can access the documentation from your browser by using this [link](localhost:3000/docs) 
 
-```
+> if you are in production environment you can access the documentation from your browser by using this [link](also-wallet-backend.onrender.com/docs) 
 
-from your browser you can access the follow endpoint for know more about the endpoints and documentation
 
-`localhost:3000/docs`
 
-## typeorm
+## Typeorm
 
 ### create new migrations
 1. package.json
