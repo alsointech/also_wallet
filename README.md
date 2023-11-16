@@ -36,19 +36,10 @@ $ npm install
 
 create your `.env` file and set up the following variables:
 ```
-<!-- DATABASE_NAME
+DATABASE_URL
 DATABASE_NAME
 DATABASE_PORT
-POSTGRES_DB
-POSTGRES_PORT
-POSTGRES_PASSWORD
-POSTGRES_USER
-POSTGRES_HOST
-API_KEY -->
-DATABASE_URL=postgres://root:123456@localhost:5432/also_wallet
-DATABASE_NAME=also_wallet
-DATABASE_PORT=5432
-API_KEY=123456
+API_KEY
 ```
 
 ## take a look to the dependencies for this prokect on `package.json` file or list them as follows:
