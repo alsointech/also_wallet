@@ -156,7 +156,7 @@ sudo docker-compose logs -f postgres
 ```bash
 # access manually
 docker-compose exec postgres bash
-psql -d also_wallet
+   also_wallet
 ```
 
 6. stop container

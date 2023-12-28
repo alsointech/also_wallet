@@ -68,7 +68,7 @@ export class InvestmentService {
 
     // overwrite the found item with requested changes
     this.investmentRepo.merge(investment, { visible: false })
-    
+
     return this.investmentRepo.save(investment)
 
     // return this.investmentRepo.delete(id)
