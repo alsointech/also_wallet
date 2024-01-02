@@ -8,5 +8,6 @@ import { InvestmentService } from 'src/investment/service/investment.service';
 @Module({
   controllers: [UserController],
   providers: [UserService, InvestmentService],
+  exports: [UserService]
 })
 export class UserModule {}

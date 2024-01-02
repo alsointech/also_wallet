@@ -1,6 +1,6 @@
 // depencencies
-import { NestFactory } from '@nestjs/core';
-import { ValidationPipe } from '@nestjs/common';
+import { NestFactory, Reflector } from '@nestjs/core';
+import { ClassSerializerInterceptor, ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 // modules
@@ -16,6 +16,8 @@ async function bootstrap() {
     })
   );
 
+  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
+
   const swaggerDescription = '\
     AlsoWallet is an app to manage your investment portfolio and control your finances\n\
     \u2022\tabstract: consider this document as the manual or the reference card related to functional software development of the app, endpoints\n\
@@ -23,8 +25,6 @@ async function bootstrap() {
     \u2022\tif you want to try this from your local machine you can consume https://www.youtube.com/watch?v=CLG0ha_a0q8\n\
     \u2022\tcode base: you can find it in the github Repository, please visit: https://github.com/afrancocedeno/also_wallet\n\
   '
-  
-
 
   const config = new DocumentBuilder()
     .setTitle('API')

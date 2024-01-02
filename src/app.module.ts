@@ -1,4 +1,4 @@
-// dependencies 
+// dependencies
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
@@ -21,7 +21,7 @@ import { UserModule } from './user/user.module';
       isGlobal: true,
       // validations on env variables types and exists
       validationSchema: Joi.object({
-        API_KEY: Joi.number().required(),
+        API_KEY: Joi.string().required(),
         DATABASE_URL: Joi.string().required(),
         /* DATABASE_NAME: Joi.string().required(),
         DATABASE_PORT: Joi.number().required(),

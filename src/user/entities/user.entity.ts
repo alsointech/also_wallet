@@ -1,3 +1,4 @@
+import { Exclude } from "class-transformer"
 import { Investment } from "../../investment/entities/investment.entity"
 import {
     PrimaryGeneratedColumn,
@@ -26,6 +27,10 @@ export class User {
     @Column({ type: 'varchar', length: 255, unique: false })
     email: string
 
+    @Exclude()
+    @Column({ type: 'varchar', length: 255 })
+    password: string;
+
     @CreateDateColumn({ name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
     createDate: string
 
@@ -37,9 +42,4 @@ export class User {
 
     @OneToMany(() => Investment, (investment) => investment.userId)
     investments: Investment[]
-
-    /*
-    balance
-    password
-    */
 }
