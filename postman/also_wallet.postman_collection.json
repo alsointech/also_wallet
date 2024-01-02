@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"click cyan\",\r\n    \"ammount\": 7000000\r\n}\r\n",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"cdt yperneobanco hd\",\r\n    \"ammount\": 10000000\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -108,7 +108,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"role\": \"admin\",\r\n  \"name\": \"Alejo\",\r\n  \"lastName\": \"Franco Cedeño\",\r\n  \"email\": \"alejo@mail.com\"\r\n}",
+							"raw": "{\r\n  \"role\": \"admin\",\r\n  \"name\": \"Manu\",\r\n  \"lastName\": \"Mejia Castaño\",\r\n  \"email\": \"manu@mail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -154,7 +154,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investment/1"
+						"url": "{{base_url}}/user/2/investment"
 					},
 					"response": []
 				},
