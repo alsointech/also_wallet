@@ -57,19 +57,6 @@
 					"response": []
 				},
 				{
-					"name": "get_invs_by_user",
-					"id": "a267b6f7-32bb-4b9c-9649-1ac7be4c1a8e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{base_url}}/investment/1"
-					},
-					"response": []
-				},
-				{
 					"name": "update_investment",
 					"id": "65c827e0-cd2d-412e-8fa7-21ac168298f0",
 					"protocolProfileBehavior": {
@@ -159,6 +146,19 @@
 					"response": []
 				},
 				{
+					"name": "get_invs_by_user",
+					"id": "a267b6f7-32bb-4b9c-9649-1ac7be4c1a8e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/investment/1"
+					},
+					"response": []
+				},
+				{
 					"name": "update_user",
 					"id": "15f921f8-984b-4254-9900-6f7e92035451",
 					"protocolProfileBehavior": {
@@ -190,6 +190,18 @@
 						"method": "PUT",
 						"header": [],
 						"url": "{{base_url}}/user/1"
+					},
+					"response": []
+				},
+				{
+					"name": "auth",
+					"id": "a41293d9-0504-47c1-9d06-81a51becb1da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
