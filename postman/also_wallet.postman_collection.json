@@ -216,8 +216,32 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"manu@mail.com\",\r\n    \"password\": \"Arkanosant2$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth?Authorization=ABCD1234",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "ABCD1234"
+								}
+							]
+						}
 					},
 					"response": []
 				}
