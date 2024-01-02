@@ -228,7 +228,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/auth/login?",
+							"raw": "{{base_url}}/auth/login",
 							"host": [
 								"{{base_url}}"
 							],
@@ -237,10 +237,6 @@
 								"login"
 							],
 							"query": [
-								{
-									"key": "",
-									"value": null
-								},
 								{
 									"key": "Authorization",
 									"value": "ABCD1234",
