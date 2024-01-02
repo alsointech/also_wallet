@@ -108,14 +108,30 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"role\": \"admin\",\r\n  \"name\": \"Manu\",\r\n  \"lastName\": \"Mejia Castaño\",\r\n  \"email\": \"manu@mail.com\"\r\n}",
+							"raw": "{\r\n    \"role\": \"admin\",\r\n    \"name\": \"Manu\",\r\n    \"lastName\": \"Mejia Castaño\",\r\n    \"email\": \"manu@mail.com\",\r\n    \"password\": \"Arkanosant2$\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/user/"
+						"url": {
+							"raw": "{{base_url}}/user/?Authorization=ABCD1234",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "ABCD1234",
+									"type": "text"
+								}
+							]
+						}
 					},
 					"response": []
 				},
