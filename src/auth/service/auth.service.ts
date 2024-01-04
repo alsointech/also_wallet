@@ -11,8 +11,11 @@ import { IAuthToken } from '../models/token.model';
 export class AuthService {
 
   constructor(
+
     private userService: UserService,
+
     private jwtService: JwtService
+    
   ) { }
 
   async validateUser(email: string, password: string) {
@@ -37,10 +40,15 @@ export class AuthService {
   }
 
   generateJWT(user: User) {
+
     const payload: IAuthToken = { role: user.role, sub: user.id }
+
     return {
+
       access_token: this.jwtService.sign(payload),
+
       user
+
     }
   }
 }

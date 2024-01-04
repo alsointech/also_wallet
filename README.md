@@ -40,6 +40,7 @@ DATABASE_URL
 DATABASE_NAME
 DATABASE_PORT
 API_KEY
+JWT_SECRET
 ```
 
 ## take a look to the dependencies for this prokect on `package.json` file or list them as follows:
