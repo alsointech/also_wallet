@@ -16,7 +16,7 @@ async function bootstrap() {
     })
   );
 
-  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
+  // app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
 
   const swaggerDescription = '\
     AlsoWallet is an app to manage your investment portfolio and control your finances\n\

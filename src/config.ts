@@ -18,25 +18,6 @@ export default registerAs('config', () => {
             host: process.env.POSTGRES_HOST, */
         },
         apiKey: process.env.API_KEY,
+        jwtSecret: process.env.JWT_SECRET,
     }
 })
-
-/**
- * use:
- * 
- * @file - fooBar.service.ts
-
-import { Injectable, Inject } from ‘@nestjs/common’ ;
-import { ConfigType } from ‘@nestjs/config’;
-import { ConfigType } from ‘./config’;
-
-@Inyectable()
-export class AppService {
-    constructor (
-        @Inject(config.KEY) private configService: Configlype<typeof config>,
-    ) {}
-    getHello(): string {
-        const apikey = this.configService.database.name;
-    }
-}
- */

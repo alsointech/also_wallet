@@ -16,12 +16,11 @@ export class LocalStrategy extends PassportStrategy(Strategy, 'local') {
       // passwordField: 'password'
 
     })
-
   }
 
   async validate(email: string, password: string) {
 
-    const user = this.authService.validateUser(email, password)
+    const user = await this.authService.validateUser(email, password)
 
     if (!user) {
 
@@ -30,6 +29,7 @@ export class LocalStrategy extends PassportStrategy(Strategy, 'local') {
     }
 
     return user
+
   }
 
 }
