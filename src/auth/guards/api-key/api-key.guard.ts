@@ -9,35 +9,35 @@ import { ConfigType } from '@nestjs/config';
 @Injectable()
 export class ApiKeyGuard implements CanActivate {
 
-  constructor(
-    private reflector: Reflector,
-    @Inject(config.KEY) private configService: ConfigType<typeof config>
-  ) { }
+	constructor(
+		private reflector: Reflector,
+		@Inject(config.KEY) private configService: ConfigType<typeof config>
+	) { }
 
-  canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
+	canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
 
-    // no token needed if public
-    const isPublic = this.reflector.get(IS_PUBLIC, context.getHandler())
+		// no token needed if public
+		const isPublic = this.reflector.get(IS_PUBLIC, context.getHandler())
 
-    if (isPublic) {
+		if (isPublic) {
 
-      return true
+			return true
 
-    }
+		}
 
-    const request = context.switchToHttp().getRequest<Request>();
+		const request = context.switchToHttp().getRequest<Request>();
 
-    const authHeader = request.header('Authorization');
+		const authHeader = request.header('Authorization');
 
-    const isAuth = authHeader === this.configService.apiKey;
+		const isAuth = authHeader === this.configService.apiKey;
 
-    if (!isAuth) {
+		if (!isAuth) {
 
-      throw new UnauthorizedException('not allowed');
+			throw new UnauthorizedException('not allowed');
 
-    }
+		}
 
-    return true;
+		return true;
 
-  }
+	}
 }

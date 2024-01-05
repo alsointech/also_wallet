@@ -40,4 +40,5 @@ import { ExpenseModule } from './expense/expense.module';
     ExpenseModule,
   ],
 })
+
 export class AppModule { }
