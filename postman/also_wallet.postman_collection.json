@@ -98,12 +98,18 @@
 			"name": "expenses",
 			"item": [
 				{
-					"name": "create_investment",
+					"name": "create_expense",
 					"id": "ca73e2d9-9f24-4e42-b58a-16578f2edd94",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -115,25 +121,31 @@
 								}
 							}
 						},
-						"url": "{{base_url}}/investment/"
+						"url": "{{base_url}}/expense/"
 					},
 					"response": []
 				},
 				{
-					"name": "get_investments",
+					"name": "get_expense",
 					"id": "7c0cd7e4-5716-4217-805c-1a83bbde1757",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{base_url}}"
+							}
+						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investment"
+						"url": "{{base_url}}/expense"
 					},
 					"response": []
 				},
 				{
-					"name": "get_inv_by_id",
+					"name": "get_expense_by_id",
 					"id": "5a0e5ee5-ac5c-4f0c-b0d1-f8760dc2662b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -141,7 +153,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/investment/1"
+						"url": "{{base_url}}/expense/1"
 					},
 					"response": []
 				},
@@ -163,7 +175,7 @@
 								}
 							}
 						},
-						"url": "{{base_url}}/investment/4"
+						"url": "{{base_url}}/expense/4"
 					},
 					"response": []
 				},
@@ -176,7 +188,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": "{{base_url}}/investment/1"
+						"url": "{{base_url}}/expense/1"
 					},
 					"response": []
 				}
@@ -338,6 +350,12 @@
 				}
 			],
 			"id": "69ece1e9-2b5c-4236-9697-6fa7c03ca726"
+		}
+	],
+	"variable": [
+		{
+			"key": "bearer_token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJzdWIiOjEsImlhdCI6MTcwNDM3MjI5MiwiZXhwIjoxNzA0NDU4NjkyfQ.J27f5TY7PO3J0hdaD8ijEuVGneX6SDjrXiNHJpckwRs"
 		}
 	]
 }
