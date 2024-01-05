@@ -95,6 +95,95 @@
 			"id": "d6277856-0c3d-47ab-a3f8-dd149bda2be5"
 		},
 		{
+			"name": "expenses",
+			"item": [
+				{
+					"name": "create_investment",
+					"id": "ca73e2d9-9f24-4e42-b58a-16578f2edd94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 2,\r\n    \"invType\": \"renta_fija\",\r\n    \"description\": \"cdt yperneobanco hd\",\r\n    \"ammount\": 10000000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/investment/"
+					},
+					"response": []
+				},
+				{
+					"name": "get_investments",
+					"id": "7c0cd7e4-5716-4217-805c-1a83bbde1757",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/investment"
+					},
+					"response": []
+				},
+				{
+					"name": "get_inv_by_id",
+					"id": "5a0e5ee5-ac5c-4f0c-b0d1-f8760dc2662b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/investment/1"
+					},
+					"response": []
+				},
+				{
+					"name": "update_investment",
+					"id": "7b543d6b-7d6e-4e86-9c55-453f8d25dfd6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"click cyanxxx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/investment/4"
+					},
+					"response": []
+				},
+				{
+					"name": "delete_investment",
+					"id": "3e51ae5e-f80c-4af3-bf37-3a13c1eb0412",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{base_url}}/investment/1"
+					},
+					"response": []
+				}
+			],
+			"id": "1f5c6d6c-f9db-4a0f-bf7d-d18b734ed85c"
+		},
+		{
 			"name": "users",
 			"item": [
 				{
