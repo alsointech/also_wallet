@@ -185,6 +185,7 @@ psql -h localhost -d also_wallet -U root
 - Frontend
 - an AI that allows to register investments or downpayments
 - an membership module to educate in all topics of the app
+- add base model
 
 ## Support
 

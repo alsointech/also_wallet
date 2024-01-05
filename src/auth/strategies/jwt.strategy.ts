@@ -9,19 +9,22 @@ import { IAuthToken } from "../models/token.model";
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
 
-	constructor(@Inject(config.KEY) private configService: ConfigType<typeof config>) {
+    constructor(@Inject(config.KEY) private configService: ConfigType<typeof config>) {
 
-		super({
+        super({
 
-			jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-			ignoreExpiration: false,
+            jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
 
-		})
-	}
+            ignoreExpiration: false,
 
-	validate(payload: IAuthToken) {
+            secretOrKey: configService.jwtSecret
 
-    return payload
+        })
+    }
 
-	}
+    validate(payload: IAuthToken) {
+
+        return payload
+
+    }
 }

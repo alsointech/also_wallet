@@ -23,15 +23,15 @@ export class CreateInvestmentDto {
     @IsPositive()
     @ApiProperty({ description: `investment's ammount` })
     readonly ammount: number;
-    
+
     @IsString()
     @IsNotEmpty()
     @ApiProperty({ description: `investment's keyword, name or description` })
     readonly description: string;
-    
+
     @IsNumber()
     @IsNotEmpty()
     @ApiProperty({ description: `investment's owner` })
-    readonly userId: number
+    readonly userId: string
 }
 

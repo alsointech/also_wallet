@@ -21,22 +21,22 @@ export class InvestmentController {
   findAll() {
     return this.investmentService.findAll();
   }
-  
+
   @Get(':id')
-  @ApiOperation({ summary: 'get investment by id' })  
-  findOne(@Param('id', ParseIntPipe) id: number) {
+  @ApiOperation({ summary: 'get investment by id' })
+  findOne(@Param('id', ParseIntPipe) id: string) {
     return this.investmentService.findOne(id);
   }
-  
+
   @Patch(':id')
-  @ApiOperation({ summary: 'update fields of an investment by id' })  
-  update(@Param('id', ParseIntPipe) id: number, @Body() updateInvestmentDto: UpdateInvestmentDto) {
+  @ApiOperation({ summary: 'update fields of an investment by id' })
+  update(@Param('id', ParseIntPipe) id: string, @Body() updateInvestmentDto: UpdateInvestmentDto) {
     return this.investmentService.update(id, updateInvestmentDto);
   }
-  
+
   @Put(':id')
-  @ApiOperation({ summary: 'delete or better make not visible and investment in db' })  
-  remove(@Param('id', ParseIntPipe) id: number) {
+  @ApiOperation({ summary: 'delete or better make not visible and investment in db' })
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.investmentService.remove(id);
   }
   /* get inv by user */

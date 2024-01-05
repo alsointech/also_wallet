@@ -12,8 +12,8 @@ import {
 
 @Entity()
 export class Investment {
-    @PrimaryGeneratedColumn()
-    id: number
+    @PrimaryGeneratedColumn('uuid')
+    id: string
 
     @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
     invType: string
@@ -30,13 +30,13 @@ export class Investment {
 
     @Column({ type: 'text' })
     description: string
-    
+
     @Column({ type: 'boolean', default: true })
     visible: boolean
-    
+
     @ManyToOne(() => User, (user) => user.investments)
     /* join is not mandatory unless name modification */
     @JoinColumn({name: 'user_id'})
     @Column({ name: 'user_id' })
-    userId: number
+    userId: string
 }

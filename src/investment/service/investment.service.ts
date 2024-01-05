@@ -38,7 +38,7 @@ export class InvestmentService {
     return this.investmentRepo.find()
   }
 
-  async findOne(id: number): Promise<Investment | null> {
+  async findOne(id: string): Promise<Investment | null> {
     const investment = await this.investmentRepo.findOneBy({ id })
     if (!investment) {
       throw new NotFoundException(`Investment #${id} not found`)
@@ -46,7 +46,7 @@ export class InvestmentService {
     return investment
   }
 
-  async update(id: number, payload: UpdateInvestmentDto): Promise<Investment | null> {
+  async update(id: string, payload: UpdateInvestmentDto): Promise<Investment | null> {
     const updatedInv = await this.investmentRepo.findOneBy({ id })
     if (!updatedInv) {
       throw new NotFoundException(`Investment #${id} not found`)
@@ -60,7 +60,7 @@ export class InvestmentService {
     return this.investmentRepo.save(updatedInv)
   }
 
-  async remove(id: number): Promise<Investment | null> {
+  async remove(id: string): Promise<Investment | null> {
     const investment = await this.investmentRepo.findOneBy({ id })
     if (!investment) {
       throw new NotFoundException(`Investment #${id} not found`)

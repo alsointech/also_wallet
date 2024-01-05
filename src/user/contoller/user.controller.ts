@@ -27,25 +27,25 @@ export class UserController {
 
   @Get(':id')
   @ApiOperation({ summary: 'get user by id' })
-  findOne(@Param('id', ParseIntPipe) id: number) {
+  findOne(@Param('id') id: string) {
     return this.userService.findOne(id);
   }
 
   @Get(':id/investment')
   @ApiOperation({ summary: 'get investments by user' })
-  findByUser(@Param('id', ParseIntPipe) id: number) {
+  findByUser(@Param('id', ParseIntPipe) id: string) {
     return this.investmentService.findAll(id);
   }
 
   @Patch(':id')
   @ApiOperation({ summary: 'update user' })
-  update(@Param('id', ParseIntPipe) id: number, @Body() updateUserDto: UpdateUserDto) {
+  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
     return this.userService.update(id, updateUserDto);
   }
 
   @Put(':id')
   @ApiOperation({ summary: 'turn off visibility of a user' })
-  remove(@Param('id', ParseIntPipe) id: number) {
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.userService.remove(id);
   }
 }
