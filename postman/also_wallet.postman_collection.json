@@ -294,6 +294,19 @@
 					"response": []
 				},
 				{
+					"name": "get_expnses_by_user",
+					"id": "d743de7e-158d-4bc5-8412-7d9c18de2e78",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/user/2/investment"
+					},
+					"response": []
+				},
+				{
 					"name": "update_user",
 					"id": "15f921f8-984b-4254-9900-6f7e92035451",
 					"protocolProfileBehavior": {
