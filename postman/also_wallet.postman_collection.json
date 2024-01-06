@@ -206,33 +206,23 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "ABCD1234",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"admin\",\r\n    \"name\": \"Manu\",\r\n    \"lastName\": \"Mejia Castaño\",\r\n    \"email\": \"manu@mail.com\",\r\n    \"password\": \"Arkanosant2$\"\r\n}",
+							"raw": "{\r\n    \"role\": \"admin\",\r\n    \"name\": \"Manu\",\r\n    \"lastName\": \"Mehia\",\r\n    \"email\": \"manu@mail.com\",\r\n    \"password\": \"manu1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "{{base_url}}/user/?Authorization=ABCD1234",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"user",
-								""
-							],
-							"query": [
-								{
-									"key": "Authorization",
-									"value": "ABCD1234",
-									"type": "text"
-								}
-							]
-						}
+						"url": "{{base_url}}/user/"
 					},
 					"response": []
 				},
@@ -244,7 +234,13 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "ABCD1234",
+								"type": "text"
+							}
+						],
 						"url": "{{base_url}}/user"
 					},
 					"response": []
@@ -283,17 +279,23 @@
 					},
 					"request": {
 						"method": "PATCH",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "ABCD1234",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"description\": \"click cyanxxx\"\r\n}",
+							"raw": "{\r\n  \"lastName\": \"Mejia Castaño\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{base_url}}/user/4"
+						"url": "{{base_url}}/user/f72dee46-4270-4258-8603-68fae92e1e9d"
 					},
 					"response": []
 				},
