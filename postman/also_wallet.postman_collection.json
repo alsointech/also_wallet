@@ -180,7 +180,7 @@
 					"response": []
 				},
 				{
-					"name": "delete_investment",
+					"name": "delete_expense",
 					"id": "3e51ae5e-f80c-4af3-bf37-3a13c1eb0412",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -307,8 +307,14 @@
 					},
 					"request": {
 						"method": "PUT",
-						"header": [],
-						"url": "{{base_url}}/user/1"
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "ABCD1234",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/user/f72dee46-4270-4258-8603-68fae92e1e9d"
 					},
 					"response": []
 				},
@@ -352,6 +358,28 @@
 				}
 			],
 			"id": "69ece1e9-2b5c-4236-9697-6fa7c03ca726"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "65bedc0a-ed2a-4410-8f76-c68b218b1259",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "43af930f-5545-4a65-8a58-da12bf343fdd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
