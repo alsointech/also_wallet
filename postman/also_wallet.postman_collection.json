@@ -140,10 +140,7 @@
 					},
 					"request": {
 						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{bearer_token}}"
-							}
+							"type": "noauth"
 						},
 						"method": "GET",
 						"header": [],
