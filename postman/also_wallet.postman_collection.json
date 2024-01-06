@@ -302,7 +302,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/user/2/investment"
+						"url": "{{base_url}}/user/f72dee46-4270-4258-8603-68fae92e1e9d/expense"
 					},
 					"response": []
 				},
