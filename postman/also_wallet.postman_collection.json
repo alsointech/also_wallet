@@ -240,7 +240,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"admin\",\r\n    \"name\": \"Manu\",\r\n    \"lastName\": \"Mehia\",\r\n    \"email\": \"manu@mail.com\",\r\n    \"password\": \"manu1234\"\r\n}",
+							"raw": "{\r\n    \"role\": \"client\",\r\n    \"name\": \"Yuta\",\r\n    \"lastName\": \"Franco\",\r\n    \"email\": \"yuta@mail.com\",\r\n    \"password\": \"yuta1234\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -357,7 +357,7 @@
 					"response": []
 				},
 				{
-					"name": "auth",
+					"name": "login",
 					"id": "a41293d9-0504-47c1-9d06-81a51becb1da",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
