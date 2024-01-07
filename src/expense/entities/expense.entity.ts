@@ -24,21 +24,21 @@ export class Expense {
     @PrimaryGeneratedColumn('uuid')
     id: string
 
-    @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
-    invType: string
-
     @CreateDateColumn({ name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
     createDate: string
 
     @UpdateDateColumn({ name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
     updateDate: string
 
-    // @Column({ type: 'money' })
-    @Column({ type: 'int' })
-    ammount: number
+    @Column({type: 'varchar', length: 255 })
+    category: string
 
     @Column({ type: 'text' })
     description: string
+
+    // @Column({ type: 'money' })
+    @Column({ type: 'int' })
+    ammount: number
 
     @Column({ type: 'boolean', default: true })
     visible: boolean

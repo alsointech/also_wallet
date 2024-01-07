@@ -10,8 +10,11 @@ import { ConfigType } from '@nestjs/config';
 export class ApiKeyGuard implements CanActivate {
 
 	constructor(
+
 		private reflector: Reflector,
+
 		@Inject(config.KEY) private configService: ConfigType<typeof config>
+
 	) { }
 
 	canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
@@ -33,7 +36,7 @@ export class ApiKeyGuard implements CanActivate {
 
 		if (!isAuth) {
 
-			throw new UnauthorizedException('not allowed');
+			throw new UnauthorizedException('not allowed by Auth header');
 
 		}
 

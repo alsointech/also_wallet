@@ -15,14 +15,14 @@ export class Investment {
     @PrimaryGeneratedColumn('uuid')
     id: string
 
-    @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
-    invType: string
-
     @CreateDateColumn({ name: 'created_at', default: () => 'CURRENT_TIMESTAMP' })
     createDate: string
 
     @UpdateDateColumn({ name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
     updateDate: string
+
+    @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
+    invType: string
 
     // @Column({ type: 'money' })
     @Column({ type: 'int' })
@@ -36,7 +36,7 @@ export class Investment {
 
     @ManyToOne(() => User, (user) => user.investments)
     /* join is not mandatory unless name modification */
-    @JoinColumn({name: 'user_id'})
+    @JoinColumn({ name: 'user_id' })
     @Column({ name: 'user_id' })
     userId: string
 }

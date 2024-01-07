@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import config from '../config';
 import { User } from 'src/user/entities/user.entity';
 import { Investment } from 'src/investment/entities/investment.entity';
+import { Expense } from 'src/expense/entities/expense.entity';
 
 @Global()
 @Module({
@@ -31,7 +32,7 @@ import { Investment } from 'src/investment/entities/investment.entity';
                 }
             },
         }),
-        TypeOrmModule.forFeature([User, Investment])
+        TypeOrmModule.forFeature([User, Investment, Expense])
     ],
     providers: [
         /*         {

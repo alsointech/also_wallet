@@ -12,32 +12,32 @@ import { JwtStrategy } from './strategies/jwt.strategy';
 
 
 @Module({
-  imports: [
-    UserModule,
-    PassportModule,
-    JwtModule.registerAsync({
-      inject: [config.KEY],
-      useFactory: (configService: ConfigType<typeof config>) => {
+    imports: [
+        UserModule,
+        PassportModule,
+        JwtModule.registerAsync({
+            inject: [config.KEY],
+            useFactory: (configService: ConfigType<typeof config>) => {
 
-        const secret = configService.jwtSecret
+                const secret = configService.jwtSecret
 
-        return {
+                return {
 
-          secret,
+                    secret,
 
-          signOptions: {
+                    signOptions: {
 
-            expiresIn: '24h'
+                        expiresIn: '24h'
 
-          }
-        }
-      }
-    })
-  ],
+                    }
+                }
+            }
+        })
+    ],
 
-  providers: [AuthService, LocalStrategy, JwtStrategy],
+    providers: [AuthService, LocalStrategy, JwtStrategy],
 
-  controllers: [AuthController]
+    controllers: [AuthController]
 
 })
 

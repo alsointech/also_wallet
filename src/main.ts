@@ -6,19 +6,25 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 // modules
 import { AppModule } from './app.module';
 import { Repository } from 'typeorm';
+
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
 
-  app.useGlobalPipes(
-    new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true
-    })
-  );
+    const app = await NestFactory.create(AppModule);
 
-  app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
+    app.useGlobalPipes(
 
-  const swaggerDescription = '\
+        new ValidationPipe({
+
+            whitelist: true,
+
+            forbidNonWhitelisted: true
+
+        })
+    );
+
+    app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)))
+
+    const swaggerDescription = '\
     AlsoWallet is an app to manage your investment portfolio and control your finances\n\
     \u2022\tabstract: consider this document as the manual or the reference card related to functional software development of the app, endpoints\n\
     \u2022\tarch: this project user a modular arquitecture wich makes it easy to scalate by creating new features the easiest way\n\
@@ -26,19 +32,23 @@ async function bootstrap() {
     \u2022\tcode base: you can find it in the github Repository, please visit: https://github.com/afrancocedeno/also_wallet\n\
   '
 
-  const config = new DocumentBuilder()
-    .setTitle('API')
-    .setDescription(swaggerDescription)
-    .setVersion('1.0')
-    .build()
+    const config = new DocumentBuilder()
 
-  const document = SwaggerModule.createDocument(app, config)
+        .setTitle('API')
 
-  SwaggerModule.setup('docs', app, document)
+        .setDescription(swaggerDescription)
 
-  app.enableCors()
+        .setVersion('1.0')
 
-  await app.listen(process.env.PORT || 3000)
+        .build()
+
+    const document = SwaggerModule.createDocument(app, config)
+
+    SwaggerModule.setup('docs', app, document)
+
+    app.enableCors()
+
+    await app.listen(process.env.PORT || 3000)
 
 }
 bootstrap();

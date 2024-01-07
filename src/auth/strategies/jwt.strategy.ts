@@ -6,6 +6,10 @@ import { ConfigType } from "@nestjs/config";
 import config from '../../config';
 import { IAuthToken } from "../models/token.model";
 
+
+/**
+ * this is to validate the request
+ */
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
 
