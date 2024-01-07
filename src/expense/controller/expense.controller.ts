@@ -17,7 +17,7 @@ export class ExpenseController {
 
     constructor(private readonly expenseService: ExpenseService) { }
 
-    @IsAdmin(Role.ADMIN)
+    @IsPublic()
     @Post()
     @ApiOperation({ summary: 'register a new expense' })
     create(@Body() createExpenseDto: CreateExpenseDto) {
@@ -26,7 +26,7 @@ export class ExpenseController {
 
     }
 
-    @IsPublic()
+    @IsAdmin(Role.ADMIN)
     @Get()
     @ApiOperation({ summary: 'list all expenses' })
     findAll() {

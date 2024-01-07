@@ -19,6 +19,14 @@ export class RolesGuard implements CanActivate {
         // get the array of possible roles
         const roles = this.reflector.get<Role[]>(ROLES, context.getHandler())
 
+        if (!roles) {
+
+            return true;
+            
+        }
+
+        console.log('roles: ', roles);
+
         // to obtain the req inside a guard
         const request = context.switchToHttp().getRequest()
 
@@ -26,10 +34,12 @@ export class RolesGuard implements CanActivate {
 
         const isAuth = roles.some(role => role === user.role)
 
+        console.log('isauth: ', isAuth);
+
         if (!isAuth) {
 
             throw new UnauthorizedException('not allowed role')
-            
+
         }
 
         return isAuth;
