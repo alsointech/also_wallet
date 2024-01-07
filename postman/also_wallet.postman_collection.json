@@ -121,7 +121,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n}\r\n",
+							"raw": "{\r\n    \"category\": \"freedom\",\r\n    \"description\": \"inversion en hapí\",\r\n    \"ammount\": 30000,\r\n    \"userId\": \"f72dee46-4270-4258-8603-68fae92e1e9d\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -140,7 +140,10 @@
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{bearer_token}}"
+							}
 						},
 						"method": "GET",
 						"header": [],
