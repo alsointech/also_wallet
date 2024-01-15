@@ -10,8 +10,17 @@ import {
 } from 'typeorm'
 
 
+export enum ExpenseCategory {
+    donation = 'donation',
+    education = 'education',
+    entertainment = 'entertainment',
+    freedom = 'freedom',
+    mandatory = 'mandatory',
+    shopping = 'shopping'
+}
+
 @Entity()
-export class Investment {
+export class Expense {
     @PrimaryGeneratedColumn('uuid')
     id: string
 
@@ -21,15 +30,15 @@ export class Investment {
     @UpdateDateColumn({ name: 'updated_at', default: () => 'CURRENT_TIMESTAMP' })
     updateDate: string
 
-    @Column({ name: 'investment_type', type: 'varchar', length: 255, unique: false })
-    invType: string
+    @Column({type: 'varchar', length: 255 })
+    category: string
+
+    @Column({ type: 'text' })
+    description: string
 
     // @Column({ type: 'money' })
     @Column({ type: 'int' })
     ammount: number
-
-    @Column({ type: 'text' })
-    description: string
 
     @Column({ type: 'boolean', default: true })
     visible: boolean

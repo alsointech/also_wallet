@@ -14,7 +14,7 @@ import { Expose } from 'class-transformer';
 export class CreateInvestmentDto {
     @IsString()
     @IsNotEmpty()
-    @Column({ name: 'inv_type '})
+    @Column({ name: 'inv_type'})
     @ApiProperty({ description: `investment's type for diversification` })
     readonly invType: string;
 
@@ -23,15 +23,15 @@ export class CreateInvestmentDto {
     @IsPositive()
     @ApiProperty({ description: `investment's ammount` })
     readonly ammount: number;
-    
+
     @IsString()
     @IsNotEmpty()
     @ApiProperty({ description: `investment's keyword, name or description` })
     readonly description: string;
-    
+
     @IsNumber()
     @IsNotEmpty()
     @ApiProperty({ description: `investment's owner` })
-    readonly userId: number
+    readonly userId: string
 }
 

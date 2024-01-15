@@ -6,83 +6,105 @@ import { Repository } from 'typeorm';
 import { User } from '../entities/user.entity';
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
+import * as bcrypt from 'bcrypt'
 
-/* @Injectable()
-export class UserService {
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
-  }
 
-  findAll() {
-    return `This action returns all user`;
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
-  }
-
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
-  }
-}
- */
 @Injectable()
 export class UserService {
-  constructor(
-    @InjectRepository(User) private userRepo: Repository<User>,
-  ) { }
+    constructor(
+        @InjectRepository(User) private userRepo: Repository<User>,
+    ) { }
 
 
-  create(payload: CreateUserDto) {
-    const newUser = this.userRepo.create(payload)
+    async create(payload: CreateUserDto) {
 
-    return this.userRepo.save(newUser)
-  }
+        const newUser = this.userRepo.create(payload)
 
+        // 10 hash iterations
+        const hashedPassword = await bcrypt.hash(newUser.password, 10)
 
-  findAll() {
-    return this.userRepo.find({
-      relations: ['investments']
-    })
-  }
+        newUser.password = hashedPassword
 
-  async findOne(id: number): Promise<User | null> {
-    const user = await this.userRepo.findOne({
-      where: { id },
-      relations: ['investments']
-    })
-    if (!user) {
-      throw new NotFoundException(`User #${id} not found`)
-    }
-    return user
-  }
+        return this.userRepo.save(newUser)
 
-  async update(id: number, payload: UpdateUserDto): Promise<User | null> {
-    const user = await this.userRepo.findOneBy({ id })
-    if (!user) {
-      throw new NotFoundException(`User #${id} not found`)
     }
 
-    // overwrite the found item with requested changes
-    this.userRepo.merge(user, payload)
-    return this.userRepo.save(user)
-  }
 
-  async remove(id: number): Promise<User | null> {
-    const user = await this.userRepo.findOneBy({ id })
-    if (!user) {
-      throw new NotFoundException(`User #${id} not found`)
+    findAll() {
+
+        return this.userRepo.find({
+
+            relations: ['investments']
+
+        })
     }
 
-    // overwrite the found item with requested changes
-    this.userRepo.merge(user, { visible: false })
+    async findOne(id: string): Promise<User | null> {
 
-    return this.userRepo.save(user)
+        const user = await this.userRepo.findOne({
 
-    // return this.userRepo.delete(id)
-  }
+            where: { id },
+
+            relations: ['investments']
+
+        })
+
+        if (!user) {
+
+            throw new NotFoundException(`User #${id} not found`)
+
+        }
+
+        return user
+    }
+
+    async findByEmail(email: string) {
+
+        const user = await this.userRepo.findOneBy({ email })
+
+        if (!user) {
+
+            throw new NotFoundException(`user #${email} not found`)
+
+        }
+
+        return user
+
+    }
+
+
+    async update(id: string, payload: UpdateUserDto): Promise<User | null> {
+
+        const user = await this.userRepo.findOneBy({ id })
+
+        if (!user) {
+
+            throw new NotFoundException(`User #${id} not found`)
+
+        }
+
+        // overwrite the found item with requested changes
+        this.userRepo.merge(user, payload)
+
+        return this.userRepo.save(user)
+
+    }
+
+    async remove(id: string): Promise<User | null> {
+
+        const user = await this.userRepo.findOneBy({ id })
+
+        if (!user) {
+
+            throw new NotFoundException(`User #${id} not found`)
+
+        }
+
+        // overwrite the found item with requested changes
+        this.userRepo.merge(user, { visible: false })
+
+        return this.userRepo.save(user)
+
+        // return this.userRepo.delete(id)
+    }
 }

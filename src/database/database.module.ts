@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import config from '../config';
 import { User } from 'src/user/entities/user.entity';
 import { Investment } from 'src/investment/entities/investment.entity';
+import { Expense } from 'src/expense/entities/expense.entity';
 
 @Global()
 @Module({
@@ -12,6 +13,7 @@ import { Investment } from 'src/investment/entities/investment.entity';
         TypeOrmModule.forRootAsync({
             inject: [config.KEY],
             useFactory: (configService: ConfigType<typeof config>) => {
+              // const { user, host, dbName, password, port } = configService.postgres
                 const { url } = configService.postgres;
                 return {
                     type: 'postgres',
@@ -23,14 +25,14 @@ import { Investment } from 'src/investment/entities/investment.entity';
                     synchronize: false,
                     autoLoadEntities: true,
                     url,
-                    ssl: {
+                    ssl: process.env.NODE_ENV === 'prod' ? {
                         rejectUnauthorized: false
-                    }
+                    } : false
 
                 }
             },
         }),
-        TypeOrmModule.forFeature([User, Investment])
+        TypeOrmModule.forFeature([User, Investment, Expense])
     ],
     providers: [
         /*         {

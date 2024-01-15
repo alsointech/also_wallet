@@ -40,6 +40,7 @@ DATABASE_URL
 DATABASE_NAME
 DATABASE_PORT
 API_KEY
+JWT_SECRET
 ```
 
 ## take a look to the dependencies for this prokect on `package.json` file or list them as follows:
@@ -156,7 +157,7 @@ sudo docker-compose logs -f postgres
 ```bash
 # access manually
 docker-compose exec postgres bash
-psql -d also_wallet
+   also_wallet
 ```
 
 6. stop container
@@ -184,6 +185,9 @@ psql -h localhost -d also_wallet -U root
 - Frontend
 - an AI that allows to register investments or downpayments
 - an membership module to educate in all topics of the app
+- add base model
+- deploy to cloud room
+- production database ?
 
 ## Support
 
