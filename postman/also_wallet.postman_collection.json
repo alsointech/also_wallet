@@ -147,7 +147,7 @@
 						},
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/expense"
+						"url": "{{base_url}}/docs"
 					},
 					"response": []
 				},
