@@ -23,7 +23,8 @@
     "migrations:create": "typeorm-ts-node-esm migration:create",
     "migrations:run": "npm run typeorm -- migration:run",
     "migrations:show": "npm run typeorm -- migration:show",
-    "migrations:drop": "npm run typeorm -- schema:drop"
+    "migrations:drop": "npm run typeorm -- schema:drop",
+    "create-env": "printenv > .env"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
