@@ -16,11 +16,6 @@ steps:
     - 'JWT_SECRET=${_JWT_SECRET}'
     - 'PORT=${_PORT}'
 
-# Raise the db
-- name: postgres
-  entrypoint: docker-compose
-  args: ['up', '-d', 'postgres']
-
 # Building dist
 - name: node
   entrypoint: npm
