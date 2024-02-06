@@ -29,3 +29,5 @@ steps:
 # Deploy
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['run', 'deploy', 'also-wallet', '--source', '.', '--region=us-central1']
+options:
+  logging: NONE
