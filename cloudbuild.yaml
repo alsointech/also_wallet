@@ -9,17 +9,12 @@ steps:
   entrypoint: npm
   args: ['run', 'create-env']
   env:
-    - 'DATABASE_URL=$DATABASE_URL'
-    - 'DATABASE_NAME=$DATABASE_NAME'
-    - 'DATABASE_PORT=$DATABASE_PORT'
-    - 'API_KEY=$API_KEY'
-    - 'JWT_SECRET=$JWT_SECRET'
-    - 'PORT=$PORT'
-
-# Raise the db
-- name: postgres
-  entrypoint: docker-compose
-  args: ['up', '-d', 'postgres']
+    - 'DATABASE_URL=${_DATABASE_URL}'
+    - 'DATABASE_NAME=${_DATABASE_NAME}'
+    - 'DATABASE_PORT=${_DATABASE_PORT}'
+    - 'API_KEY=${_API_KEY}'
+    - 'JWT_SECRET=${_JWT_SECRET}'
+    - 'PORT=${_PORT}'
 
 # Building dist
 - name: node
@@ -28,4 +23,7 @@ steps:
 
 # Deploy
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'also-wallet', '--source', '.', '--region=us-central1']
+  args: ['run', 'deploy', '--proejct=also-wallet', '--source', '.', '--region=us-central1', '--allow-unauthenticated']
+
+options:
+  logging: NONE
