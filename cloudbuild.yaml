@@ -23,6 +23,7 @@ steps:
 
 # Deploy
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['run', 'deploy', 'also-wallet', '--source', '.', '--region=us-central1']
+  args: ['run', 'deploy', 'also-wallet', '--source', '.', '--region=us-central1', '--set-env-vars=NODE_ENV=production']
+
 options:
   logging: NONE
